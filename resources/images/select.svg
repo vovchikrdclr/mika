@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="8px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0---message" transform="translate(-869.000000, -500.000000)" fill="#FFFFFF">
+            <g id="FIELDS" transform="translate(148.000000, 444.000000)">
+                <g id="service" transform="translate(391.000000, 0.000000)">
+                    <g id="ic_keyboard_arrow_down" transform="translate(324.000000, 48.000000)">
+                        <polygon id="Shape" points="7.41 8.16666667 12 12.9375 16.59 8.16666667 18 9.63541667 12 15.8854167 6 9.63541667"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

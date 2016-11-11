@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head data-path="resources">
+	<meta charset="UTF-8">
+	<title>editor</title>
+	<link href="http://fonts.googleapis.com/css?family=PT+Serif%7CRoboto:300,400,500&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="resources/css/styles.css">
+	<!--[if lte 9 ]><script src="https://cdn.polyfill.io/v1/polyfill.min.js"></script><![endif]-->  
+	<!--[if (gt IE 9)|!(IE)]><!--><script src="https://cdn.polyfill.io/v1/polyfill.min.js?features=fetch,Promise"></script><!--<![endif]-->
+	<script type="text/javascript" src="resources/js/libs/tinymce/tinymce.min.js"></script>
+	<script data-main="resources/js/app" src="resources/js/require.js"></script>
+	<!--<script data-main="resources/js/build" src="resources/js/require.js"></script>-->
+
+</head>
+<body>
+	<div class="page-wrapper">
+		<main>
+			<div class="wrapper">
+
+				<!--data-action - адресс, куда слать данные. будет отправлен json со всей инфой-->
+				<!--у каждого объекта есть свойства header, subheader, content, left, top, width, height, backgroundColor-->
+				<!--пример  {"item-2":{"id":"item-2","left":130,"top":400,"width":30,"height":30,"header":"Siemens Magnetom Skyra  us 34567","subheader":"Methamphetamine","content":"<h5>Вместимость:</h5><li>Открытый дизайн и&nbsp;широкий туннель с&nbsp;внутренним диаметром 70&nbsp;см;</li></ul>"},"item-1":{"id":"item-1","left":300,"top":20,"width":30,"height":30,"header":"Siemens Magnetom Skyra  us 34567","subheader":"Methamphetamine","content":"<h5>Вместимость:</h5><ul><li>Открытый дизайн и&nbsp;широкий туннель с&nbsp;внутренним диаметром 70&nbsp;см;</li></ul>"}}-->
+				<div class="area-editor" data-action="test.json">
+					
+					<div class="draw-area" id="draw-area">
+						<!-- <div class="item" id="item-1" style="left: 300px; top: 20px;">
+							<div class="nfo">
+								<div class="tp">
+									<div class="header">Siemens Magnetom Skyra  us 34567</div>
+									<div class="subheader">Methamphetamine</div>
+								
+									<div class="link-id">123</div>
+								</div>
+								<div class="bt">
+									<h5>Вместимость:</h5>
+									<ul>
+										<li>Открытый дизайн и&nbsp;широкий туннель с&nbsp;внутренним диаметром 70&nbsp;см;</li>
+									 </ul>
+								</div>
+							</div>
+						</div>
+						<div class="item" id="item-2" style="left: 130px; top: 400px;">
+							<div class="nfo">
+								<div class="tp">
+									<div class="header">Siemens Magnetom Skyra  us 34567</div>
+									<div class="subheader">Methamphetamine</div>
+								</div>
+								<div class="bt">
+									<h5>Вместимость:</h5>
+									<ul>
+										<li>Открытый дизайн и&nbsp;широкий туннель с&nbsp;внутренним диаметром 70&nbsp;см;</li>
+									 </ul>
+								</div>
+							</div>
+						</div> -->
+					</div>
+
+					<div class="bg">
+						<img src="tmp-img.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="popup-container">
+
+					<div class="popup" id="popup">
+						<div class="close" id="popup-close">
+							<div class="b1"></div>
+							<div class="b2"></div>
+						</div>
+						<div class="popup-inner">
+							<div class="block-header">
+								<div class="nm">Заголовок</div>
+								<label>
+									<input type="text" id="hd-input">
+								</label>
+							</div>
+
+							<div class="block-subheader">
+								<div class="nm">Артикл</div>
+								<label>
+									<input type="text" id="subhd-input">
+								</label>
+							</div>
+
+							<div class="block-subheader">
+								<div class="nm">id объекта</div>
+								<label>
+									<input type="text" id="link-id-input">
+								</label>
+
+								<div class="delete">Удалить область</div>
+							</div>
+
+							<!--обновление отсюда-->
+
+							<!-- <div class="inputs-line">
+								<div class="input-wrapper left">
+									<div class="nm">отступ слева</div>
+									<label>
+										<input type="text" id="input-left">
+									</label>
+								</div>
+								<div class="input-wrapper left">
+									<div class="nm">отступ сверху</div>
+									<label>
+										<input type="text" id="input-top">
+									</label>
+								</div>
+								<div class="clear"></div>
+							</div>
+
+							<div class="inputs-line">
+								<div class="input-wrapper left">
+									<div class="nm">ширина</div>
+									<label>
+										<input type="text" id="input-width">
+									</label>
+								</div>
+								<div class="input-wrapper left">
+									<div class="nm">высота</div>
+									<label>
+										<input type="text" id="input-height">
+									</label>
+								</div>
+								<div class="clear"></div>
+							</div> -->
+
+							<!--до сюда-->
+
+						<!-- 	<div class="block-colors">
+								<div class="nm">Цвет</div>
+								<div class="items">
+									<div class="item view-color active" data-bg="#909090">
+										<div class="bd"></div>
+										<div class="inner wh"></div>
+									</div>
+									<div class="item view-color" data-bg="#0077ff">
+										<div class="bd"></div>
+										<div class="inner bl"></div>
+									</div>
+									<div class="item view-color" data-bg="#41a28e">
+										<div class="bd"></div>
+										<div class="inner gr"></div>
+									</div>
+									<div class="item view-color" data-bg="#ffdf00">
+										<div class="bd"></div>
+										<div class="inner yl"></div>
+									</div>
+									<div class="item view-color" data-bg="#ff0000">
+										<div class="bd"></div>
+										<div class="inner rd"></div>
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div> -->
+							<div class="block-image">
+								<div class="nm">Изображение</div>
+								<label>
+									<input type="file" id="img-input">
+								</label>
+							</div>
+							
+							<div class="btn-wrap">
+								<button class="save" id="save">Сохранить</button>
+								<!-- <div class="commit-msg" id="commit-msg">Сохнаняется</div> -->
+								<div class="success-msg" id="sucess-msg">Данные сохранены</div>
+								<div class="error-msg" id="error-msg">Ощибка. Попробуйте еще раз.</div>
+
+								<a href="#" class="view-link" target="_blank">Посмотреть на странице</a>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

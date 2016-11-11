@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="11px" viewBox="0 0 32 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="footer" transform="translate(-943.000000, -370.000000)" fill="#E2370F">
+            <g transform="translate(-1.000000, 197.000000)" id="red-collar">
+                <g transform="translate(943.000000, 173.000000)">
+                    <polygon id="Shape" points="32.996 0.492 22.179 10.996 16.998 5.968 11.816 10.996 0.999 0.492 1.483 0.005 16.998 5.026 32.513 0.005"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

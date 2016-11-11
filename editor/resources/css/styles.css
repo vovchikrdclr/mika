@@ -1,0 +1,385 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0 none;
+	border: none;
+}
+html, body {
+	border: 0 none;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.6;
+	color: #252525;
+	font-size: 14px;
+}
+html {
+	height: 100%;
+	-webkit-text-size-adjust: none;
+}
+body {
+/*	font-family: 'Roboto', sans-serif;*/
+	font-size: 16px;
+	color: #252525;
+	font-weight: 400;
+	height: 100%;
+	background: #eeeeee;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-ms-touch-action: none;
+	touch-action: none;
+}
+li {
+	list-style: none outside none;
+}
+
+
+
+.page-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+}
+
+.wrapper {
+	position: relative;
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.area-editor {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 1170px;
+	height: 700px;
+	margin: auto;
+	border: 1px solid #ffffff;
+}
+.area-editor .draw-area {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	cursor: crosshair;
+}
+.area-editor .item {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 48px;
+	height: 48px;
+	background: url('../../mouse.svg') no-repeat center;
+	background-size: 100%;
+	cursor: pointer;
+	transform: rotate(45deg);
+	transition: all 0.3 ease 0s;
+}
+.area-editor .item:hover {
+	transform: rotate(135deg);
+}
+.area-editor .item .nfo {
+	display: none;
+}
+.area-editor .bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+.wrapper img {
+	display: block;
+}
+
+.popup-container {
+	width: 100%;
+	height: 0;
+}
+.popup-container .popup {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	z-index: 20;
+	overflow: auto;
+	border-left: 1px solid #9E9E9E;
+	border-right: 1px solid #9E9E9E;
+	display: none;
+
+	-webkit-transform: translateZ(0px);
+	-ms-transform: translateZ(0px);
+	-o-transform: translateZ(0px);
+	transform: translateZ(0px);
+}
+
+.popup-container .popup.active {
+	display: block;
+}
+
+.popup-container .popup .close {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	right: 5%;
+	margin-right: -11px;
+	top: 39px;
+	cursor: pointer;
+	z-index: 20;
+}
+.popup-container .popup .close .b1,
+.popup-container .popup .close .b2 {
+	position: absolute;
+	left: 7px;
+	top: 21px;
+	width: 30px;
+	height: 2px;
+	background: #252525;
+}
+.popup-container .popup .close .b1 {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.popup-container .popup .close .b2 {
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.popup-container .popup-inner {
+	position: absolute;
+	width: 90%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	min-height: 100%;
+/*	outline: 1px solid #000000;*/
+}
+
+.popup-container .popup-inner .header-block {
+	position: relative;
+	width: 100%;
+/*	outline: 1px solid #cc0000;*/
+}
+.popup-container textarea {
+	display: block;
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+	resize: none;
+}
+
+.popup-container .block-header {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.popup-container .block-subheader {
+	padding-bottom: 30px;
+}
+.popup-container .block-text {
+	padding-bottom: 30px;
+}
+
+.block-header label,
+.block-subheader label {
+	padding-left: 20px;
+	padding-right: 20px;
+	display: block;
+	width: 500px;
+	height: 36px;
+	background: #ffffff;
+	border: 1px solid #9E9E9E;
+}
+.input-wrapper label {
+	padding-left: 20px;
+	padding-right: 20px;
+	display: block;
+	width: 200px;
+	height: 36px;
+	background: #ffffff;
+	border: 1px solid #9E9E9E;
+}
+.block-header input,
+.block-subheader input {
+	display: block;
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+	line-height: 36px;
+	color: #252525;
+	font-size: 14px;
+}
+.block-image{
+	padding-bottom: 30px;
+}
+.block-image label {
+	border: none;
+}
+.input-wrapper {
+	position: relative;
+}
+.input-wrapper input {
+	display: block;
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+	line-height: 36px;
+	color: #252525;
+	font-size: 14px;
+}
+.input-wrapper.left {
+	float: left;
+	width: 48%;
+}
+.input-wrapper.right {
+	float: right;
+	width: 48%;
+}
+.inputs-line {
+	padding-bottom: 30px;
+}
+
+.block-subheader {
+	position: relative;
+}
+.block-subheader .delete {
+	position: absolute;
+	right: 0;
+	top: 40px;
+	color: #DF2929;
+	cursor: pointer;
+}
+
+.popup-container .nm {
+	padding-bottom: 10px;
+}
+
+.btn-wrap {
+	position: relative;
+}
+
+.btn-wrap .commit-msg,
+.btn-wrap .success-msg {
+	font-size: 14px;
+}
+.btn-wrap .commit-msg {
+	opacity: 0;
+}
+.btn-wrap .commit-msg {
+	position: absolute;
+	top: 9px;
+	left: 150px;
+}
+.btn-wrap .success-msg,
+.btn-wrap .error-msg {
+	position: absolute;
+	top: 6px;
+	left: 150px;
+	opacity: 0;
+}
+.btn-wrap .success-msg.visible,
+.btn-wrap .error-msg.visible {
+	opacity: 1;
+}
+.popup-container .save {
+	background: #eeeeee;
+	border: 1px solid #9E9E9E;
+	line-height: 36px;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-family: 'Roboto', sans-serif;
+	line-height: 36px;
+	color: #252525;
+	font-size: 14px;
+	cursor: pointer;
+}
+.popup-container .save:hover {
+	background: #ffffff;
+}
+.btn-wrap {
+	padding-bottom: 50px;
+}
+.btn-wrap .view-link {
+	position: absolute;
+	right: 0;
+	top: 6px;
+	text-decoration: none;
+	color: #2B5DAB;
+}
+
+.block-colors {
+	position: relative;
+	padding-bottom: 20px;
+}
+.block-colors .items {
+	margin-left: 1px;
+}
+.block-colors .item {
+	position: relative;
+	width: 45px;
+	height: 45px;
+	float: left;
+	cursor: pointer;
+	margin-left: -1px;
+}
+.block-colors .item .bd {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	border: 1px solid transparent;
+}
+.block-colors .item.active .bd,
+.block-colors .item:hover .bd {
+	border-color: #9E9E9E;
+}
+.block-colors .item.active {
+	cursor: default;
+}
+
+.clear {
+	clear: both;
+}
+.block-colors .item .inner {
+	position: absolute;
+	opacity: 0.2;
+	width: 25px;
+	height: 25px;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background: #000000;
+}
+.block-colors .item .inner.rd {
+	background: #FF0000;
+}
+.block-colors .item .inner.bl {
+	background: #0077FF;
+}
+.block-colors .item .inner.gr {
+	background: #41a28e;
+}
+.block-colors .item .inner.yl {
+	background: #FFDF00;
+}
+.block-colors .item .inner.wh {
+	background: #909090;
+}
+
+
+
+

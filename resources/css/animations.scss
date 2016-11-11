@@ -1,0 +1,77 @@
+@keyframes btn-hover {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  15% {
+    transform: scaleY(0.7);
+    opacity: 0.5;
+    background: $sea;
+  }
+  20% {
+    background: none;
+  }
+  25% {
+    background: $sea;
+    transform: scaleY(1);
+  }
+  30% {
+    background: none;
+  }
+  35% {
+    background: $sea;
+    opacity: 0.7;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes btn-out {
+  0% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+@keyframes heart {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+@keyframes btn-pattern {
+  0% {
+    background-position: 0px 0px; 
+    transform: translate3d(0,0,0) rotate(0.0001deg);
+  }
+  100% {
+    background-position: 125px -125px; 
+    transform: translate3d(0,0,0) rotate(0.0001deg);
+  } 
+}
+@keyframes error {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(-8px);
+  }
+  40% {
+    transform: translateX(7px);
+  }
+  60% {
+    transform: translateX(-6px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

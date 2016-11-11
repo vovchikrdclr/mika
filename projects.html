@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MIKA</title>
+	<meta name="resources-path" content="resources">
+	<script src="resources/js/libs/modernizr.js"></script>
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+	<script data-main="resources/js/app" src="resources/js/require.js"></script>
+	<link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+	<div class="page-wrapper">
+		<form class="form-hidden view-form" data-id="hidden-form" data-ajax="true" action="catalog-tile.html">
+		</form>
+		<div class="popup popup-login view-popup" data-id="login-popup">
+			<div class="wrapper">
+				<div class="close-popup view-popup-close"></div>
+			</div>
+			<div class="overlay">
+				<div class="wrapper">
+					<div class="form-popup">
+						<div class="top">
+							<div class="form-response view-form-response" data-id="login-form">Кажеться почта или пароль введены неправильно</div>
+							<div class="form-popup-inner">
+								<div class="nm">через почту</div>
+								<div class="form-wrapper">
+									<form action="#" method="POST" class="view-form waiting" data-id="login-form">
+										<div class="ln">
+											<label class="input-wrapper">
+												<span class="input-placeholder">Электронная почта</span>
+												<input type="text" class="text" name="email" data-required="true">
+											</label>
+										</div>
+										<div class="ln">
+											<label class="input-wrapper">
+												<span class="input-placeholder">Пароль</span>
+												<input type="password" class="text" name="password" data-required="true">
+											</label>
+										</div>
+										<input type="submit">
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="bottom">
+							<a href="#" class="view-popup-toggle" data-id="login-popup-serv"><span>зайти или зарегестрироваться через vk, facebook и twitter</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup popup-login view-popup" data-id="login-popup-serv">
+			<div class="wrapper">
+				<div class="close-popup view-popup-close"></div>
+			</div>
+			<div class="overlay">
+			<div class="view-popup-close"></div>
+				<div class="wrapper">
+					<div class="form-popup">
+						<div class="top">
+							<div class="form-response view-form-response" data-id="login-form">Кажеться почта или пароль введены неправильно</div>
+							<div class="form-popup-inner">
+								<div class="ln serv">
+									<a href="#" class="vk item-serv"><h7 class="ac">продолжить через вконтакте</h7></a>
+								</div>
+								<div class="ln serv">
+									<a href="#" class="fb item-serv"><h7 class="ac">продолжить через facebook</h7></a>
+								</div>
+								<div class="ln serv">
+									<a href="#" class="tw item-serv"><h7 class="ac">продолжить через twitter</h7></a>
+								</div>
+							</div>
+						</div>
+						<div class="bottom">
+							<a href="#" class="view-popup-toggle" data-id="login-popup"><span>зайти или зарегестрироваться через почту</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>			
+		<div class="popup popup-filter view-popup" data-id="filter-popup">
+			<div class="overlay">
+				<div class="wrapper">
+					<h1>как мы можем помочь?</h1>
+					<div class="btn view-popup-toggle" data-id="choice-popup-1">подобрать плитку</div>
+					<div class="btn view-popup-toggle" data-id="letter-popup">быстрое письмо</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup popup-letter view-popup" data-id="letter-popup">
+			<div class="overlay">
+				<div class="wrapper">
+					<div class="back view-popup-toggle" data-id="filter-popup"></div>
+					<h1>быстрое письмо</h1>
+					<section class="form-section">
+						<div class="form-wrapper">
+							<div class="responce view-form-response" data-id="simple-form">
+								<div class="responce-inner"></div>
+							</div>
+							<form class="view-form" action="test-json-responce.json" data-id="simple-form" data-ajax="true">
+								<div class="ln-tp">
+									<div class="ln">
+										<label class="input-wrapper">
+											<span class="input-placeholder">Имя*</span>
+											<input type="text" data-required="true" class="input-text" name="name">
+										</label>
+									</div>
+									<div class="ln">
+										<label class="input-wrapper">
+											<span class="input-placeholder">Услуга</span>
+											<select name="services">
+												<option value="value1">Узнать о наличии</option> 
+													<option value="value2" selected>Вызвать дизайнера</option>
+													<option value="value3">И так далее</option>
+											</select>
+										</label>
+									</div>
+									<div class="clear"></div>
+									<div class="ln">
+										<label class="input-wrapper">
+											<span class="input-placeholder">Телефон*</span>
+											<input type="email" data-required="true" class="input-text" name="tel">
+										</label>
+									</div>
+									<div class="ln">
+										<label class="input-wrapper">
+											<span class="input-placeholder">электронная почта</span>
+											<input type="email" data-required="false" class="input-text" name="email">
+										</label>
+									</div>
+								</div>
+								<div class="ln-bt">
+									<div class="ln">
+										<label class="input-wrapper">
+											<span class="input-placeholder">Сообщение</span>
+											<textarea name="text"></textarea>
+										</label>
+									</div>
+								</div>
+								<div class="ln-sb">
+									<input type="submit" class="btn" value="Отправить">
+								</div>
+							</form>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>	
+		<div class="popup popup-choice view-popup" data-id="choice-popup-1">
+			<div class="overlay">
+				<div class="wrapper">
+					<div class="back view-popup-toggle" data-id="filter-popup"></div>
+					<h1 class="input-name" data-name="type">на что похожа плитка?</h1>
+					<div class="counter">1/5</div>
+					<div class="btn input-btn color-btn type1 view-popup-toggle" data-id="choice-popup-2">камень</div>
+					<div class="btn input-btn color-btn type1 view-popup-toggle" data-id="choice-popup-2">бетон</div>
+					<div class="btn input-btn color-btn type1 view-popup-toggle" data-id="choice-popup-2">мрамор</div>
+					<div class="btn input-btn color-btn type1 view-popup-toggle" data-id="choice-popup-2">дерево</div>
+					<div class="btn input-btn color-btn type1 view-popup-toggle" data-id="choice-popup-2">узор</div>
+					<div class="clear"></div>
+					<div class="btn color-btn view-popup-toggle" data-id="choice-popup-2">пропустить</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup popup-choice view-popup" data-id="choice-popup-2">
+			<div class="overlay">
+				<div class="wrapper">
+					<div class="back view-popup-toggle" data-id="choice-popup-1"></div>
+					<h1 class="input-name" data-name="color">на что похожа плитка?</h1>
+					<div class="counter">2/2</div>
+					<div class="btn input-btn color-btn type1">камень</div>
+					<div class="btn input-btn color-btn type1">бетон</div>
+					<div class="btn input-btn color-btn type1">мрамор</div>
+					<div class="btn input-btn color-btn type1">дерево</div>
+					<div class="btn input-btn color-btn type1">узор</div>
+					<div class="clear"></div>
+					<div class="btn form-result">посмотреть результаты</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup popup-search view-popup" data-id="search">
+			<div class="wrapper">
+				<div class="close-popup view-popup-close"></div>
+			</div>
+			<div class="overlay">
+				<div class="wrapper">
+					<div class="search">
+						<form class="search-form-full" action="search.html">
+							<label class="search-label">
+								<input type="text" class="search-input" placeholder="Искать">
+								<input type="submit">
+							</label>
+						</form>
+					</div>
+				</div>
+			</div>	
+		</div>						
+		<header class="index">
+			<div class="logo-container sk">
+				<div class="wrapper">
+					<a href="index.html" class="logo">
+						<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+						<svg width="78px" height="44px" viewBox="0 0 78 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+						    <title>Group 4</title>
+						    <desc>Created with Sketch.</desc>
+						    <defs></defs>
+						    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						        <g id="mainNav" transform="translate(-37.000000, -38.000000)" fill="#FEFEFE">
+						            <g id="header" transform="translate(15.000000, 0.000000)">
+						                <g id="Page-1">
+						                    <g id="Group-4" transform="translate(22.000000, 38.000000)">
+						                        <polygon id="Fill-2" points="17 7 17 1 58 1 58 7 59 7 59 0 16 0 16 7"></polygon>
+						                        <polygon id="Fill-3" points="58 37 58 43 17 43 17 37 16 37 16 44 59 44 59 44 59 37"></polygon>
+						                        <polygon id="Fill-4" points="10.0596825 19.8469841 5.55026455 12.5255026 0.0118518519 12.5255026 0.0118518519 31.4397884 5.1447619 31.4397884 5.1447619 20.6296296 9.9557672 27.9792593 10.0596825 27.9792593 14.8990476 20.5756614 14.8990476 31.4397884 20.1142857 31.4397884 20.1142857 12.5255026 14.5752381 12.5255026"></polygon>
+						                        <polygon id="Fill-5" points="27.4061164 23.1715344 27.4061164 12.5256085 22.2179683 12.5256085 22.2179683 31.4396825 27.1062222 31.4396825 34.4329947 20.7943915 34.4329947 31.4396825 39.6183915 31.4396825 39.6183915 12.5256085 34.7297143 12.5256085"></polygon>
+						                        <polygon id="Fill-6" points="59.726709 12.525545 53.5144339 12.525545 47.0018413 20.1968677 47.0018413 12.525545 41.7612063 12.525545 41.7612063 31.4398307 47.0018413 31.4398307 47.0018413 26.5498836 48.9203598 24.4150688 53.6754921 31.4398307 59.9713651 31.4398307 52.5684021 20.6573968"></polygon>
+						                        <path d="M68.9311958,23.190328 L65.3132063,23.190328 L67.1356402,18.6032381 L68.9311958,23.190328 Z M69.7011429,12.3905397 L64.646963,12.3905397 L58.6797672,26.5120212 L62.1064339,31.4398519 L63.684,27.4620741 L70.5320423,27.4620741 L72.1337354,31.4398519 L77.7515132,31.4398519 L69.7011429,12.3905397 Z" id="Fill-7"></path>
+						                    </g>
+						                </g>
+						            </g>
+						        </g>
+						    </g>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="login-container sk">
+				<div class="wrapper">
+					<a href="#" class="login view-popup-toggle" data-id="login-popup">
+						<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+						<svg width="16px" height="15px" viewBox="0 0 16 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+						    <title>  3</title>
+						    <desc>Created with Sketch.</desc>
+						    <defs>
+						        <path d="M8.39285714,14.1964297 L13.9553571,8.83928682 C14.0357143,8.75892968 16,6.96428682 16,4.82142968 C16,2.20535825 14.4017857,0.64285825 11.7321429,0.64285825 C10.1696429,0.64285825 8.70535714,1.87500111 8,2.57142968 C7.29464286,1.87500111 5.83035714,0.64285825 4.26785714,0.64285825 C1.59821429,0.64285825 0,2.20535825 0,4.82142968 C0,6.96428682 1.96428571,8.75892968 2.03571429,8.82142968 L7.60714286,14.1964297 C7.71428571,14.3035725 7.85714286,14.357144 8,14.357144 C8.14285714,14.357144 8.28571429,14.3035725 8.39285714,14.1964297 Z" id="path-1"></path>
+						        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="16" height="13.7142857" fill="white">
+						            <use xlink:href="#path-1"></use>
+						        </mask>
+						    </defs>
+						    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						        <g id="main-login" transform="translate(-1320.000000, -55.000000)" stroke-width="4" stroke="#EE293B">
+						            <g id="header" transform="translate(15.000000, 0.000000)">
+						                <g id="Group" transform="translate(1305.000000, 55.000000)">
+						                    <g id="--3">
+						                        <use id="-" mask="url(#mask-2)" xlink:href="#path-1"></use>
+						                    </g>
+						                </g>
+						            </g>
+						        </g>
+						    </g>
+						</svg>
+						<span>моя мика</span>
+					</a>
+				</div>
+			</div>
+			<div class="wrapper">
+				<nav>
+					<a href="catalog.html" class="ctlg"><span>каталог</span></a>
+					<div class="submenu">
+						<a href="catalog-tile.html">плитки</a>
+						<a href="catalog-san.html">сaнтехники</a>
+						<a href="catalog-chemistry.html">строительных смесей</a>
+					</div>
+					<a href="shares.html" class="shares-but"><span>акции</span></a>
+					<a href="services.html"><span>услуги</span></a>
+					<a href="projects.html"><span>дизайн-проекты</span></a>
+					<a href="about.html" class="about-but"><span>о магазине</span></a>
+					<a href="contacts.html" class="contacts-but"><span>контакты</span></a>
+				</nav>
+				<div class="search-btn view-popup-toggle" data-id="search">Поиск</div>
+				<div class="city">
+					<a href="#" class="city-active">
+						<spaan>воронеж</spaan>
+					</a>
+					<div class="hiden-city">
+						<div class="ct">
+							<a href="#"><span>воронеж</span></a>
+						</div>
+						<div class="ct">
+							<a href="#"><span>липецк</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="btn-popup-container sk">
+			<div class="wrapper">
+				<div class="btn-popup view-popup-toggle" data-id="filter-popup" data-color="#EE293B"></div>
+			</div>
+		</div>
+		<div class="social-container sk">
+			<div class="wrapper">
+				<div class="social">
+					<a href="#" class="item vk"></a>
+					<a href="#" class="item fb"></a>
+					<a href="#" class="item pt"></a>
+				</div>
+			</div>
+		</div>
+		<main class="non-standart">
+			<div class="projects">
+				<div class="wrapper">
+					<div class="vertical-text left"><span>керамика</span></div>
+					<div class="main-slide">
+						<h1 class="title">дизайн-проекты</h1>
+						<h7 class="side">для нас важен ваш комфорт при покупке отделочных материалов, поэтому мы предлагаем ряд дополнительных услуг, которые решают сложные вопросы выбора и транспортировки плитки</h7>
+						<div class="btn color-btn">заказать проект</div>
+					</div>
+					<div class="content grid">
+						<div class="grid-sizer"></div>
+						<div class="grid-margin"></div>
+						<a href="#" class="grid-item">
+							<img src="tmp/projects1.jpg" alt="">
+							<div class="btn color-btn">посмотреть</div>
+						</a>
+						<a href="#" class="grid-item">
+							<img src="tmp/projects2.jpg" alt="">
+							<div class="btn color-btn">посмотреть</div>
+						</a>
+						<a href="#" class="grid-item">
+							<img src="tmp/projects3.jpg" alt="">
+							<div class="btn color-btn">посмотреть</div>
+						</a>
+						<a href="#" class="grid-item">
+							<img src="tmp/projects4.jpg" alt="">
+							<div class="btn color-btn">посмотреть</div>
+						</a>
+						<a href="#" class="grid-item">
+							<img src="tmp/projects5.jpg" alt="">
+							<div class="btn color-btn">посмотреть</div>
+						</a>
+						<a href="#" class="grid-item">
+							<img src="tmp/projects6.jpg" alt="">
+							<div class="btn color-btn">посмотреть</div>
+						</a>
+						<a href="#" class="grid-item">
+							<img src="tmp/projects7.jpg" alt="">
+							<div class="btn color-btn">посмотреть</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="wrapper">
+				<div class="top">
+					<div class="column">
+						<img src="resources/images/footer-logo.svg" alt="">
+					</div>
+					<div class="column">
+						<div class="adress">
+							<div class="street">ул. хользунова, 36</div>
+							<a href="tel:8 (473) 277–78–77" class="phone">8 (473) 277–78–77</a>
+							<a href="mailto:info@mika.su" class="mail">info@mika.su</a>
+						</div>
+						<div class="adress">
+							<div class="street">ул. хользунова, 36</div>
+							<a href="tel:8 (473) 277–78–77" class="phone">8 (473) 277–78–77</a>
+							<a href="mailto:info@mika.su" class="mail">info@mika.su</a>
+						</div>
+					</div>
+					<div class="column">
+						<div class="title">сайты компании</div>
+						<a href="#">www.souzkomplekt.ru</a>
+						<a href="#">www.cersanit-vrn.ru</a>
+						<a href="#">www.ceramica36.ru</a>
+					</div>
+					<div class="dev">
+						<span>Сделано в</span>
+						<a href="http://redcollar.ru/" data-letters="Red Collar">Red Collar</a>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="map-view" data-lat="51.703039" data-lng="39.194295" data-zoom="11">
+					</div>
+					<div class="view-map-marker" data-lat="51.703039" data-lng="39.194295"></div>
+					<div class="view-map-marker" data-lat="51.670596" data-lng="39.177182"></div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
