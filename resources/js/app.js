@@ -68,7 +68,8 @@ require([
 	'fps/fps-scroll.view',
 	'slider/slider.close.view',
 	'form/form-hidden.view',
-	'popup/small-popup.view'
+	'popup/small-popup.view',
+	'share/share.view'
 
 	
 	], function(
@@ -116,7 +117,8 @@ require([
 		fpsScrollView,
 		sliderCloseView,
 		formHiddenView,
-		smallPopupView
+		smallPopupView,
+		shareView
 
 	) {
 	domReady(function () {
@@ -164,6 +166,7 @@ require([
 		sliderCloseView.init();
 		formHiddenView.init();
 		smallPopupView.init();
+		shareView.init();
 		
 	});
 });
