@@ -220,19 +220,21 @@ h6 {
   text-transform: uppercase;
 }
 
-h7 {
+.h7 p {
   font: 700 10px 'GothamPro', sans-serif;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  margin-bottom: 0;
+  padding-top: 0;
 }
 
-h7.ac {
+.h7.ac p {
   font: 900 11px/1.63 'GothamPro', sans-serif;
   letter-spacing: 0.111em;
   text-transform: uppercase;
 }
 
-.user-text h7.ac {
+.user-text .h7.ac p {
   position: relative;
   display: block;
   color: #ADAEB3;
@@ -1401,7 +1403,7 @@ main.index {
   color: #fff;
 }
 
-.text-block h7 {
+.text-block .h7 p {
   position: absolute;
   top: 30px;
   left: 30px;
@@ -1876,7 +1878,7 @@ h5.title:before {
   background: #4C52A4;
 }
 
-h7.side {
+.h7.side p {
   color: #ADAEB3;
   line-height: 1.64;
 }
@@ -2106,7 +2108,7 @@ form .input-wrapper.error .input-placeholder {
   color: #85C7C2;
 }
 
-.main .main-block-2 .text h7 {
+.main .main-block-2 .text .h7 p {
   margin-top: 13px;
   font-size: 13px;
   display: block;
@@ -2231,7 +2233,7 @@ form .input-wrapper.error .input-placeholder {
   color: #4C52A4;
 }
 
-.main .main-block-5 .text h7 {
+.main .main-block-5 .text .h7 p {
   margin-top: 13px;
   font-size: 13px;
   display: block;
@@ -2313,7 +2315,7 @@ form .input-wrapper.error .input-placeholder {
   color: #85C7C2;
 }
 
-.main .main-block-7 .text h7 {
+.main .main-block-7 .text .h7 p {
   margin-top: 13px;
   font-size: 13px;
   display: block;
@@ -2334,7 +2336,7 @@ form .input-wrapper.error .input-placeholder {
   border-bottom: none;
 }
 
-.main .download-pdf .top h7 {
+.main .download-pdf .top .h7 p {
   position: absolute;
   top: -5px;
   left: 50%;
@@ -2363,7 +2365,7 @@ form .input-wrapper.error .input-placeholder {
   height: 48px;
 }
 
-.main .download-pdf .bottom .pdf h7 {
+.main .download-pdf .bottom .pdf .h7 p {
   position: absolute;
   top: 0;
   left: 55px;
@@ -2377,7 +2379,7 @@ form .input-wrapper.error .input-placeholder {
   transition: all 0.3s ease 0s;
 }
 
-.main .download-pdf .bottom .pdf:hover h7 {
+.main .download-pdf .bottom .pdf:hover .h7 p {
   color: #EE293B;
 }
 
@@ -2498,7 +2500,7 @@ form .input-wrapper.error .input-placeholder {
   color: #000;
 }
 
-.shares .text h7.ac {
+.shares .text .h7.ac p {
   padding-bottom: 0;
 }
 
@@ -3127,12 +3129,12 @@ form .input-wrapper.error .input-placeholder {
   background: url("../images/tw-login.svg") no-repeat center;
 }
 
-.popup.popup-login .form-popup .item-serv h7 {
+.popup.popup-login .form-popup .item-serv .h7 p {
   color: #4C52A4;
   transition: all 0.2s ease 0s;
 }
 
-.popup.popup-login .form-popup .item-serv:hover h7 {
+.popup.popup-login .form-popup .item-serv:hover .h7 p {
   color: #85C7C2;
 }
 
@@ -4125,7 +4127,7 @@ form .input-wrapper.error .input-placeholder {
   background: url("../images/pt.svg") no-repeat center;
 }
 
-.chemistry h7 {
+.chemistry .h7 p {
   display: block;
   width: 345px;
   margin-left: 4%;
@@ -4718,7 +4720,7 @@ form .input-wrapper.error .input-placeholder {
   border-bottom: 1px solid transparent;
 }
 
-.services h7 {
+.services .h7 p {
   margin-top: -55px;
   width: 555px;
   float: right;
@@ -4820,7 +4822,7 @@ form .input-wrapper.error .input-placeholder {
   color: #4C52A4;
 }
 
-.projects h7 {
+.projects .h7 p {
   margin-left: 4%;
   margin-top: 150px;
   display: block;

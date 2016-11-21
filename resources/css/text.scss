@@ -39,18 +39,20 @@ h6 {
 	letter-spacing: 0.067em;
 	text-transform: uppercase;
 }
-h7 {
+.h7 p {
 	font: 700 10px 'GothamPro', sans-serif;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
+	margin-bottom: 0;
+	padding-top: 0;
 }
-h7.ac {
+.h7.ac p {
 	font: 900 11px/1.63 'GothamPro', sans-serif;
 	letter-spacing: 0.111em;
 	text-transform: uppercase;
 }
 .user-text {
-	h7.ac {
+	.h7.ac p {
 		position: relative;
 		display: block;
 		color: #ADAEB3;

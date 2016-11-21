@@ -326,7 +326,7 @@ main {
 	position: relative;
 	color: #fff;
 
-	h7 {
+	.h7 p {
 		position: absolute;
 		top: 30px;
 		left: 30px;
@@ -798,7 +798,7 @@ h5.title:before {
 	height: 5px;
 	background: $blue;
 }
-h7.side {
+.h7.side p {
 	color: $inactive;
 	line-height: 1.64;
 }
@@ -1026,7 +1026,7 @@ form .input-wrapper.error .input-placeholder {
 					}
 				}
 			}
-			h7 {
+			.h7 p {
 				margin-top: 13px;
 				font-size: 13px;
 				display: block;
@@ -1142,7 +1142,7 @@ form .input-wrapper.error .input-placeholder {
 					}
 				}
 			}
-			h7 {
+			.h7 p {
 				margin-top: 13px;
 				font-size: 13px;
 				display: block;
@@ -1219,7 +1219,7 @@ form .input-wrapper.error .input-placeholder {
 					}
 				}
 			}
-			h7 {
+			.h7 p {
 				margin-top: 13px;
 				font-size: 13px;
 				display: block;
@@ -1239,7 +1239,7 @@ form .input-wrapper.error .input-placeholder {
 			border: 1px solid $blue;
 			border-bottom: none;
 
-			h7 {
+			.h7 p {
 				position: absolute;
 				top: -5px;
 				left: 50%;
@@ -1265,7 +1265,7 @@ form .input-wrapper.error .input-placeholder {
 					width: 39px;
 					height: 48px;
 				}
-				h7 {
+				.h7 p {
 					position: absolute;
 					top: 0;
 					left: 55px;
@@ -1279,7 +1279,7 @@ form .input-wrapper.error .input-placeholder {
 				}
 				&:hover {
 
-					h7 {
+					.h7 p {
 						color: $red;
 					}
 					.icon {
@@ -1657,7 +1657,7 @@ form .input-wrapper.error .input-placeholder {
 				}
 			}
 		}
-		h7.ac {
+		.h7.ac p {
 			padding-bottom: 0;
 		}
 	}
@@ -2465,11 +2465,11 @@ form .input-wrapper.error .input-placeholder {
 					background: url('../images/tw-login.svg') no-repeat center;
 				}
 
-				h7 {
+				.h7 p {
 					color: $blue;
 					transition: all 0.2s ease 0s;
 				}
-				&:hover h7 {
+				&:hover .h7 p {
 					color: $sea;
 				}
 			}
@@ -3396,7 +3396,7 @@ form .input-wrapper.error .input-placeholder {
 
 .chemistry {
 	
-	h7 {
+	.h7 p {
 		display: block;
 		width: 345px;
 		margin-left: 4%;
@@ -3950,7 +3950,7 @@ form .input-wrapper.error .input-placeholder {
 
 .services {
 
-	h7 {
+	.h7 p {
 		margin-top: -55px;
 		width: 555px;
 		float: right;
@@ -4042,7 +4042,7 @@ form .input-wrapper.error .input-placeholder {
 	h1 {
 		color: $blue;
 	}
-	h7 {
+	.h7 p {
 		margin-left: 4%;
 		margin-top: 150px;
 		display: block;

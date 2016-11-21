@@ -12,168 +12,188 @@
 </head>
 <body>
 	<div class="page-wrapper">
-		<div class="popups">
-			<div class="popup popup-login view-popup" data-id="login-popup">
-				<div class="overlay">
-				<div class="view-popup-close"></div>
-					<div class="wrapper">
-						<div class="form-popup">
-							<div class="top">
-								<div class="form-response view-form-response" data-id="login-form">Кажеться почта или пароль введены неправильно</div>
-								<div class="form-popup-inner">
-									<div class="nm">через почту</div>
-									<div class="form-wrapper">
-										<form action="#" method="POST" class="view-form waiting" data-id="login-form">
-											<div class="ln">
-												<label class="input-wrapper">
-													<span class="input-placeholder">Электронная почта</span>
-													<input type="text" class="text" name="email" data-required="true">
-												</label>
-											</div>
-											<div class="ln">
-												<label class="input-wrapper">
-													<span class="input-placeholder">Пароль</span>
-													<input type="password" class="text" name="password" data-required="true">
-												</label>
-											</div>
-											<input type="submit">
-										</form>
-									</div>
+		<div class="popup popup-login view-popup" data-id="login-popup">
+			<div class="wrapper">
+				<div class="close-popup view-popup-close"></div>
+			</div>
+			<div class="overlay">
+				<div class="wrapper">
+					<div class="form-popup">
+						<div class="top">
+							<div class="form-popup-inner">
+								<div class="nm">через почту</div>
+								<div class="form-wrapper">
+									<form action="#" data-ajax="true" class="view-form status-success" data-id="login-form">
+										<div class="form-response view-form-response" data-id="login-form"></div>
+										<div class="ln">
+											<label class="input-wrapper">
+												<span class="input-placeholder">Электронная почта</span>
+												<input type="text" class="text" name="email" data-required="true">
+											</label>
+										</div>
+										<div class="ln">
+											<label class="input-wrapper">
+												<span class="input-placeholder">Пароль</span>
+												<input type="password" class="text" name="password" data-required="true">
+											</label>
+										</div>
+										<input type="submit">
+									</form>
 								</div>
 							</div>
-							<div class="bottom">
-								<a href="#" class="view-popup-toggle" data-id="login-popup-serv"><span>зайти или зарегестрироваться через vk, facebook и twitter</span></a>
-							</div>
+						</div>
+						<div class="bottom">
+							<a href="#" class="view-popup-toggle" data-id="login-popup-serv"><span>зайти или зарегестрироваться через vk, facebook и twitter</span></a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="popup popup-login view-popup" data-id="login-popup-serv">
-				<div class="overlay">
-				<div class="view-popup-close"></div>
-					<div class="wrapper">
-						<div class="form-popup">
-							<div class="top">
-								<div class="form-response view-form-response" data-id="login-form">Кажеться почта или пароль введены неправильно</div>
-								<div class="form-popup-inner">
-									<div class="ln serv">
-										<a href="#" class="vk item-serv"><h7 class="ac">продолжить через вконтакте</h7></a>
-									</div>
-									<div class="ln serv">
-										<a href="#" class="fb item-serv"><h7 class="ac">продолжить через facebook</h7></a>
-									</div>
-									<div class="ln serv">
-										<a href="#" class="tw item-serv"><h7 class="ac">продолжить через twitter</h7></a>
-									</div>
+		</div>
+		<div class="popup popup-login view-popup" data-id="login-popup-serv">
+			<div class="wrapper">
+				<div class="close-popup view-popup-close"></div>
+			</div>
+			<div class="overlay">
+			<div class="view-popup-close"></div>
+				<div class="wrapper">
+					<div class="form-popup">
+						<div class="top">
+							<div class="form-response view-form-response" data-id="login-form">Кажеться почта или пароль введены неправильно</div>
+							<div class="form-popup-inner">
+								<div class="ln serv">
+									<a href="#" class="vk item-serv"><div class="h7 ac"><p>продолжить через вконтакте</p></div></a>
+								</div>
+								<div class="ln serv">
+									<a href="#" class="fb item-serv"><div class="h7 ac"><p>продолжить через facebook</p></div></a>
+								</div>
+								<div class="ln serv">
+									<a href="#" class="tw item-serv"><div class="h7 ac"><p>продолжить через twitter</p></div></a>
 								</div>
 							</div>
-							<div class="bottom">
-								<a href="#" class="view-popup-toggle" data-id="login-popup"><span>зайти или зарегестрироваться через почту</span></a>
-							</div>
+						</div>
+						<div class="bottom">
+							<a href="#" class="view-popup-toggle" data-id="login-popup"><span>зайти или зарегестрироваться через почту</span></a>
 						</div>
 					</div>
 				</div>
-			</div>			
-			<div class="popup popup-filter view-popup" data-id="filter-popup">
-				<div class="overlay">
-					<div class="wrapper">
-						<h1>как мы можем помочь?</h1>
-						<div class="btn view-popup-toggle" data-id="choice-popup-1">подобрать плитку</div>
-						<div class="btn view-popup-toggle" data-id="letter-popup">быстрое письмо</div>
-					</div>
+			</div>
+		</div>			
+		<div class="popup popup-filter view-popup" data-id="filter-popup">
+			<div class="overlay">
+				<div class="wrapper">
+					<h1>как мы можем помочь?</h1>
+					<div class="btn view-popup-toggle" data-id="choice-popup-1">подобрать плитку</div>
+					<div class="btn view-popup-toggle" data-id="letter-popup">быстрое письмо</div>
 				</div>
 			</div>
-			<div class="popup popup-letter view-popup" data-id="letter-popup">
-				<div class="overlay">
-					<div class="wrapper">
-						<div class="back view-popup-toggle" data-id="filter-popup"></div>
-						<h1>быстрое письмо</h1>
-						<section class="form-section">
-							<div class="form-wrapper">
-								<div class="responce view-form-response" data-id="simple-form">
-									<div class="responce-inner"></div>
-								</div>
-								<form class="view-form" action="test-json-responce.json" data-id="simple-form">
-									<div class="ln-tp">
-										<div class="ln">
-											<label class="input-wrapper">
-												<span class="input-placeholder">Имя*</span>
-												<input type="text" data-required="true" class="input-text" name="name">
-											</label>
-										</div>
-										<div class="ln">
-											<label class="input-wrapper">
-												<span class="input-placeholder">Услуга</span>
-												<select name="services">
-													<option value="value1">Узнать о наличии</option> 
-  													<option value="value2" selected>Вызвать дизайнера</option>
-  													<option value="value3">И так далее</option>
-												</select>
-											</label>
-										</div>
-										<div class="clear"></div>
-										<div class="ln">
-											<label class="input-wrapper">
-												<span class="input-placeholder">Телефон*</span>
-												<input type="email" data-required="true" class="input-text" name="tel">
-											</label>
-										</div>
-										<div class="ln">
-											<label class="input-wrapper">
-												<span class="input-placeholder">электронная почта</span>
-												<input type="email" data-required="false" class="input-text" name="email">
-											</label>
-										</div>
-									</div>
-									<div class="ln-bt">
-										<div class="ln">
-											<label class="input-wrapper">
-												<span class="input-placeholder">Сообщение</span>
-												<textarea name="text"></textarea>
-											</label>
-										</div>
-									</div>
-									<div class="ln-sb">
-										<input type="submit" class="btn" value="Отправить">
-									</div>
-								</form>
+		</div>
+		<div class="popup popup-letter view-popup" data-id="letter-popup">
+			<div class="overlay">
+				<div class="wrapper">
+					<div class="back view-popup-toggle" data-id="filter-popup"></div>
+					<h1>быстрое письмо</h1>
+					<section class="form-section">
+						<div class="form-wrapper">
+							<div class="responce view-form-response" data-id="simple-form">
+								<div class="responce-inner"></div>
 							</div>
-						</section>
+							<form class="view-form" action="test-json-responce.json" data-id="simple-form" data-ajax="true">
+								<div class="ln-tp">
+									<div class="ln">
+										<label class="input-wrapper">
+											<span class="input-placeholder">Имя*</span>
+											<input type="text" data-required="true" class="input-text" name="name">
+										</label>
+									</div>
+									<div class="ln">
+										<label class="input-wrapper">
+											<span class="input-placeholder">Услуга</span>
+											<select name="services">
+												<option value="value1">Узнать о наличии</option> 
+													<option value="value2" selected>Вызвать дизайнера</option>
+													<option value="value3">И так далее</option>
+											</select>
+										</label>
+									</div>
+									<div class="clear"></div>
+									<div class="ln">
+										<label class="input-wrapper">
+											<span class="input-placeholder">Телефон*</span>
+											<input type="email" data-required="true" class="input-text" name="tel">
+										</label>
+									</div>
+									<div class="ln">
+										<label class="input-wrapper">
+											<span class="input-placeholder">электронная почта</span>
+											<input type="email" data-required="false" class="input-text" name="email">
+										</label>
+									</div>
+								</div>
+								<div class="ln-bt">
+									<div class="ln">
+										<label class="input-wrapper">
+											<span class="input-placeholder">Сообщение</span>
+											<textarea name="text"></textarea>
+										</label>
+									</div>
+								</div>
+								<div class="ln-sb">
+									<input type="submit" class="btn" value="Отправить">
+								</div>
+							</form>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>	
+		<div class="popup popup-choice view-popup" data-id="choice-popup-1">
+			<div class="overlay">
+				<div class="wrapper">
+					<div class="back view-popup-toggle" data-id="filter-popup"></div>
+					<h1>на что похожа плитка?</h1>
+					<div class="counter">1/5</div>
+					<div class="btn input-btn color-btn type1 view-popup-toggle" data-id="choice-popup-2" data-type="что-то" data-name="name-1">камень</div>
+					<div class="btn input-btn color-btn type1 view-popup-toggle" data-id="choice-popup-2" data-type="что-то" data-name="name-2">бетон</div>
+					<div class="btn input-btn color-btn type1 view-popup-toggle" data-id="choice-popup-2" data-type="что-то" data-name="name-3">мрамор</div>
+					<div class="btn input-btn color-btn type1 view-popup-toggle" data-id="choice-popup-2" data-type="что-то" data-name="name-4">дерево</div>
+					<div class="btn input-btn color-btn type1 view-popup-toggle" data-id="choice-popup-2" data-type="что-то" data-name="name-5">узор</div>
+					<div class="clear"></div>
+					<div class="btn color-btn view-popup-toggle">пропустить</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup popup-choice view-popup" data-id="choice-popup-2">
+			<div class="overlay">
+				<div class="wrapper">
+					<div class="back view-popup-toggle" data-id="choice-popup-1"></div>
+					<h1>на что похожа плитка?</h1>
+					<div class="counter">2/2</div>
+					<div class="btn input-btn color-btn type1" data-type="что-то еще" data-name="name-6">камень</div>
+					<div class="btn input-btn color-btn type1" data-type="что-то еще" data-name="name-7">бетон</div>
+					<div class="btn input-btn color-btn type1" data-type="что-то еще" data-name="name-8">мрамор</div>
+					<div class="btn input-btn color-btn type1" data-type="что-то еще" data-name="name-9">дерево</div>
+					<div class="btn input-btn color-btn type1" data-type="что-то еще" data-name="name-10">узор</div>
+					<div class="clear"></div>
+					<a href="catalog-tile.html" class="btn form-result">посмотреть результаты</a>
+				</div>
+			</div>
+		</div>
+		<div class="popup popup-search view-popup" data-id="search">
+			<div class="wrapper">
+				<div class="close-popup view-popup-close"></div>
+			</div>
+			<div class="overlay">
+				<div class="wrapper">
+					<div class="search">
+						<form class="search-form-full" action="search.html">
+							<label class="search-label">
+								<input type="text" class="search-input" placeholder="Искать">
+								<input type="submit">
+							</label>
+						</form>
 					</div>
 				</div>
 			</div>	
-			<div class="popup popup-choice view-popup" data-id="choice-popup-1">
-				<div class="overlay">
-					<div class="wrapper">
-						<div class="back view-popup-toggle" data-id="filter-popup"></div>
-						<h1>на что похожа плитка?</h1>
-						<div class="counter">1/5</div>
-						<div class="btn color-btn type1 view-popup-toggle" data-id="choice-popup-2">камень</div>
-						<div class="btn color-btn type1 view-popup-toggle" data-id="choice-popup-2">бетон</div>
-						<div class="btn color-btn type1 view-popup-toggle" data-id="choice-popup-2">мрамор</div>
-						<div class="btn color-btn type1 view-popup-toggle" data-id="choice-popup-2">дерево</div>
-						<div class="btn color-btn type1 view-popup-toggle" data-id="choice-popup-2">узор</div>
-						<div class="clear"></div>
-						<div class="btn color-btn view-popup-toggle" data-id="choice-popup-2">пропустить</div>
-					</div>
-				</div>
-			</div>
-			<div class="popup popup-choice view-popup" data-id="choice-popup-2">
-				<div class="overlay">
-					<div class="wrapper">
-						<div class="back view-popup-toggle" data-id="choice-popup-1"></div>
-						<h1>на что похожа плитка?</h1>
-						<div class="counter">2/2</div>
-						<div class="btn color-btn type1">камень</div>
-						<div class="btn color-btn type1">бетон</div>
-						<div class="btn color-btn type1">мрамор</div>
-						<div class="btn color-btn type1">дерево</div>
-						<div class="btn color-btn type1">узор</div>
-						<div class="clear"></div>
-						<div class="btn view-popup-close">посмотреть результаты</div>
-					</div>
-				</div>
-			</div>						
 		</div>
 		<header>
 			<div class="logo-container sk">
@@ -291,7 +311,7 @@
 					<div class="vertical-text left"><span>керамика</span></div>
 					<h1 class="title">строительная химия</h1>
 					<div class="content">
-						<h7 class="side">для нас важен ваш комфорт при покупке отделочных материалов, поэтому мы предлагаем ряд дополнительных услуг, которые решают сложные вопросы выбора и транспортировки плитки</h7>
+						<div class="h7 side"><p>для нас важен ваш комфорт при покупке отделочных материалов, поэтому мы предлагаем ряд дополнительных услуг, которые решают сложные вопросы выбора и транспортировки плитки</p></div>
 						<a href="#" class="item item-1" 
 						data-bottom-top="transform:translate3d(0,  100px, 0px) rotate(0.0001deg)" 
 						data-top-bottom="transform:translate3d(0, -100px,  0px) rotate(0.0001deg)">
