@@ -4678,7 +4678,8 @@ form .input-wrapper.error .input-placeholder {
 .add {
   position: relative;
   margin: 50px auto;
-  width: 171px;
+  width: 230px;
+  cursor: pointer;
 }
 
 .add span {
@@ -4689,14 +4690,13 @@ form .input-wrapper.error .input-placeholder {
   letter-spacing: 0.16em;
   color: #59595C;
   border-bottom: 1px solid #59595C;
-  cursor: pointer;
   transition: all 0.2s ease 0s;
 }
 
 .add svg {
   position: absolute;
   top: 2px;
-  right: -25px;
+  right: 0px;
 }
 
 .add svg g {

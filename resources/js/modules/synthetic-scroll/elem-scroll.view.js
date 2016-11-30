@@ -29,6 +29,8 @@ define(['dispatcher'], function(dispatcher) {
 		sharesBut.addEventListener("click", function(e) {
 			if (document.getElementsByClassName('index')[0]) {
 				e.preventDefault();
+			} else {
+				localStorage.setItem('scroll', 'shares');
 			}
 			dispatcher.dispatch({
 				element: shares,
@@ -38,12 +40,27 @@ define(['dispatcher'], function(dispatcher) {
 		aboutBut.addEventListener("click", function(e) {
 			if (document.getElementsByClassName('index')[0]) {
 				e.preventDefault();
+			} else {
+				localStorage.setItem('scroll', 'about');
 			}
 			dispatcher.dispatch({
 				element: about,
 				type: 'scroll-to'
 			});
 		});
+		if (window.localStorage.scroll === 'shares') {
+			dispatcher.dispatch({
+				element: shares,
+				type: 'scroll-to'
+			});
+			localStorage.clear();
+		} else if (window.localStorage.scroll === 'about') {
+			dispatcher.dispatch({
+				element: about,
+				type: 'scroll-to'
+			});
+			localStorage.clear();
+		}
 	}
 
 	return {
