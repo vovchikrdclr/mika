@@ -69,7 +69,8 @@ require([
 	'slider/slider.close.view',
 	'form/form-hidden.view',
 	'popup/small-popup.view',
-	'share/share.view'
+	'share/share.view',
+	'decor/like.view'
 
 	
 	], function(
@@ -118,7 +119,8 @@ require([
 		sliderCloseView,
 		formHiddenView,
 		smallPopupView,
-		shareView
+		shareView,
+		likeView
 
 	) {
 	domReady(function () {
@@ -167,6 +169,7 @@ require([
 		formHiddenView.init();
 		smallPopupView.init();
 		shareView.init();
+		likeView.init();
 		
 	});
 });

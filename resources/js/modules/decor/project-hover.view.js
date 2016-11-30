@@ -58,7 +58,6 @@ define(['dispatcher', 'resize/resize.store', 'scroll/scroll.store'], function(di
 
 		x = e.clientX;
 		y = e.clientY;
-		console.log(y);
 
 		_draw(derection);
 	}

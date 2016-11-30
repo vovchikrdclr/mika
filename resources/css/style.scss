@@ -271,6 +271,11 @@ main {
 		g {
 			transition: all 0.3s ease 0s;
 		}
+		&.active {
+			g {
+				fill: $red;
+			}
+		}
 	}
 }
 .color-btn {

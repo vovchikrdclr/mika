@@ -25,7 +25,6 @@ define([
 		var data = new FormData();
 		var href;
 		
-		console.log(storeData);
 		for (var key in storeData) {
 			// if (storeData[key].active === true) {
 				href = storeData[key].href;

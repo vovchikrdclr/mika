@@ -1348,6 +1348,10 @@ main.index {
   transition: all 0.3s ease 0s;
 }
 
+.product .add-like.active g {
+  fill: #EE293B;
+}
+
 .color-btn {
   position: relative;
 }
