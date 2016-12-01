@@ -14,6 +14,7 @@ define([
 
 	var replaceable = {};
 	var response = false;
+	var preloader;
 
 
 	var _handleRouteChange = function(storeData) {
@@ -55,6 +56,7 @@ define([
 	}
 
 	var _replace = function() {
+		preloader.style.opacity = "1";
 		var div;
 		for (var key in replaceable) {
 			replaceable[key].container.innerHTML=" ";
@@ -69,7 +71,8 @@ define([
 
 			setTimeout(function() {
 				element.classList.remove('hidden');
-			}, 100);
+				preloader.style.opacity = "0";
+			}, 600);
 		}
 
 		if (!response) return;
@@ -107,6 +110,7 @@ define([
 	}
 
 	var _handleMutate = function() {
+		preloader = document.getElementsByClassName('preloader')[0];
 		var containers = document.getElementsByClassName('replaceable');
 		for (var i = 0; i < containers.length; i++) {
 			_add(containers[i]);

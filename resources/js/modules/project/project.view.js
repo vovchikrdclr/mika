@@ -41,6 +41,15 @@ define(['dispatcher', 'scroll/scroll.store', 'resize/resize.store'], function(di
 		}
 		elem = inner.getElementsByClassName('item');
 
+		for (var j = 0; j < elem.length; j++) {
+			elem[j].addEventListener('mouseenter', function(e) {
+				e.currentTarget.style.zIndex = "100";
+			});
+			elem[j].addEventListener('mouseleave', function(e) {
+				e.currentTarget.style.zIndex = "";
+			});
+		}
+
 		_handleChange();
 
 		resizeStore.eventEmitter.subscribe(_handleChange);
