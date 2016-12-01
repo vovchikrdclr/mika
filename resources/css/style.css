@@ -5820,36 +5820,6 @@ form .input-wrapper.error .input-placeholder {
   border-radius: 3px 3px 0 0;
 }
 
-.preloader .slice:nth-child(1) {
-  transform: rotateZ(60deg) rotateY(0deg) rotateX(0);
-  animation: 0.15s linear 0.82s preload-hide-1 both 1;
-}
-
-.preloader .slice:nth-child(2) {
-  transform: rotateZ(120deg) rotateY(0deg) rotateX(0);
-  animation: 0.15s linear 0.74s preload-hide-2 both 1;
-}
-
-.preloader .slice:nth-child(3) {
-  transform: rotateZ(180deg) rotateY(0deg) rotateX(0);
-  animation: 0.15s linear 0.66s preload-hide-3 both 1;
-}
-
-.preloader .slice:nth-child(4) {
-  transform: rotateZ(240deg) rotateY(0deg) rotateX(0);
-  animation: 0.15s linear 0.58s preload-hide-4 both 1;
-}
-
-.preloader .slice:nth-child(5) {
-  transform: rotateZ(300deg) rotateY(0deg) rotateX(0);
-  animation: 0.15s linear 0.5s preload-hide-5 both 1;
-}
-
-.preloader .slice:nth-child(6) {
-  transform: rotateZ(360deg) rotateY(0deg) rotateX(0);
-  animation: 0.15s linear 0.42s preload-hide-6 both 1;
-}
-
 .preloader.loading {
   animation: 2s preload-flip steps(2) infinite both;
 }

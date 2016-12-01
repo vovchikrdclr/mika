@@ -57,6 +57,7 @@ define([
 
 	var _replace = function() {
 		preloader.style.opacity = "1";
+		preloader.classList.add("loading");
 		var div;
 		for (var key in replaceable) {
 			replaceable[key].container.innerHTML=" ";
@@ -72,6 +73,7 @@ define([
 			setTimeout(function() {
 				element.classList.remove('hidden');
 				preloader.style.opacity = "0";
+				preloader.classList.remove("loading");
 			}, 600);
 		}
 
