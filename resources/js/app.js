@@ -70,7 +70,8 @@ require([
 	'form/form-hidden.view',
 	'popup/small-popup.view',
 	'share/share.view',
-	'decor/like.view'
+	'decor/like.view',
+	'decor/delete.view'
 
 	
 	], function(
@@ -120,7 +121,8 @@ require([
 		formHiddenView,
 		smallPopupView,
 		shareView,
-		likeView
+		likeView,
+		deleteView
 
 	) {
 	domReady(function () {
@@ -170,6 +172,7 @@ require([
 		smallPopupView.init();
 		shareView.init();
 		likeView.init();
+		deleteView.init();
 		
 	});
 });

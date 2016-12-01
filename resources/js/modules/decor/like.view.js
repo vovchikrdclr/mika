@@ -8,11 +8,10 @@ define(['dispatcher', 'utils'], function(dispatcher, utils) {
 			el.classList.toggle('active');
 			var parent = el.parentElement;
 			var id = el.getAttribute("data-id");
-			console.log(id);
 			
 			var data = new FormData();
 			var action = el.getAttribute('data-action');
-			data.append('droduct', id);
+			data.append('product-add', id);
 
 			utils.ajax.post(action, data, function(e) {
 			}, true);

@@ -2308,7 +2308,7 @@ form .input-wrapper.error .input-placeholder {
 		}
 	}
 	&.popup-filter.active {
-		transition: all 0.3s ease 0.5s;
+		transition: all 0.3s ease 0s;
 	}
 	&.active {
 		transform: scale(1) rotate(0.0001deg);
