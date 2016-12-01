@@ -1057,7 +1057,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body.prevent-scroll {
+body.prevent-scroll,
+body.prevent-scroll-1 {
   overflow: hidden;
 }
 
@@ -3206,6 +3207,21 @@ form .input-wrapper.error .input-placeholder {
   background: rgba(255, 255, 255, 0.95);
 }
 
+.popup.popup-letter .close-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.popup.popup-letter .close-popup {
+  pointer-events: auto;
+  background-color: #EE293B;
+  background-image: url("../images/mouse-close1.svg");
+}
+
 .close-popup {
   position: absolute;
   top: 35px;
@@ -3295,7 +3311,7 @@ form .input-wrapper.error .input-placeholder {
   transform: scale(1) rotate(90deg);
 }
 
-.popup.active ~ .btn-popup-container .btn-popup:after {
+.prevent-scroll .btn-popup-container .btn-popup:after {
   opacity: 1;
   transform: scale(1);
 }

@@ -193,7 +193,70 @@
 					</div>
 				</div>
 			</div>	
-		</div>						
+		</div>
+		<div class="popup popup-letter view-popup" data-id="service-popup">
+			<div class="overlay">
+				<div class="wrapper">
+					<div class="close-container">
+						<div class="wrapper">
+							<div class="close-popup view-popup-close"></div>
+						</div>
+					</div>
+					<h1>быстрое письмо</h1>
+					<section class="form-section">
+						<div class="form-wrapper">
+							<div class="responce view-form-response" data-id="simple-form">
+								<div class="responce-inner"></div>
+							</div>
+							<form class="view-form" action="test-json-responce.json" data-id="simple-form" data-ajax="true">
+								<div class="ln-tp">
+									<div class="ln">
+										<label class="input-wrapper">
+											<span class="input-placeholder">Имя*</span>
+											<input type="text" data-required="true" class="input-text" name="name">
+										</label>
+									</div>
+									<div class="ln">
+										<label class="input-wrapper">
+											<span class="input-placeholder">Услуга</span>
+											<select name="services">
+												<option value="value1">Узнать о наличии</option> 
+													<option value="value2" selected>Вызвать дизайнера</option>
+													<option value="value3">И так далее</option>
+											</select>
+										</label>
+									</div>
+									<div class="clear"></div>
+									<div class="ln">
+										<label class="input-wrapper">
+											<span class="input-placeholder">Телефон*</span>
+											<input type="email" data-required="true" class="input-text" name="tel">
+										</label>
+									</div>
+									<div class="ln">
+										<label class="input-wrapper">
+											<span class="input-placeholder">электронная почта</span>
+											<input type="email" data-required="false" class="input-text" name="email">
+										</label>
+									</div>
+								</div>
+								<div class="ln-bt">
+									<div class="ln">
+										<label class="input-wrapper">
+											<span class="input-placeholder">Сообщение</span>
+											<textarea name="text"></textarea>
+										</label>
+									</div>
+								</div>
+								<div class="ln-sb">
+									<input type="submit" class="btn" value="Отправить">
+								</div>
+							</form>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>					
 		<header>
 			<div class="logo-container sk">
 				<div class="wrapper">
@@ -308,7 +371,7 @@
 						<div class="item">
 							<h3>доставка</h3>
 							<p>Освободите свое время и закажите доставку вашей покупки с 8.00 до 19.00 от 250 рублей. Цена зависит от района проживания и веса товара.</p>
-							<div class="btn color-btn">заказать</div>
+							<div class="btn color-btn view-popup-toggle" data-id="service-popup">заказать</div>
 						</div>
 						<div class="item">
 							<h3>дизайн-консьерж</h3>

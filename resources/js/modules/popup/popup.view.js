@@ -42,8 +42,13 @@ define(['dispatcher', 'popup/popup.store'], function(dispatcher, store) {
 				overflow.addEventListener('touchmove', _preventTouchScroll);
 			}
 			// body.addEventListener('touchmove', _preventTouchScroll);
-			body.classList.add('prevent-scroll');
-
+			
+			console.log(storeData.active);
+			if (storeData.active === 'service-popup') {
+				body.classList.add('prevent-scroll-1');
+			} else {
+				body.classList.add('prevent-scroll');
+			}
 			ww2 = document.documentElement.clientWidth;
 			diff = ww2 - ww1;
 			if (diff < 0) diff = 0;
@@ -66,6 +71,7 @@ define(['dispatcher', 'popup/popup.store'], function(dispatcher, store) {
 			}
 			// body.removeEventListener('touchmove', _preventTouchScroll);
 			body.classList.remove('prevent-scroll');
+			body.classList.remove('prevent-scroll-1');
 		}
 
 		if (pw) {
