@@ -49,9 +49,9 @@ define(['dispatcher'], function(dispatcher) {
 				check = true;
 				items[id].text = e.text;
 			}
-			if (e.hasOwnProperty('bg')) {
+			if (e.hasOwnProperty('img')) {
 				check = true;
-				items[id].bg = e.bg;
+				items[id].img = e.img;
 			}
 			if (e.hasOwnProperty('x')) {
 				check = true;
