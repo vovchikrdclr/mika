@@ -2919,14 +2919,28 @@ form .input-wrapper.error .input-placeholder {
 				text-transform: uppercase;
 				color: #fff;
 				margin-bottom: 10px;
-				transition: all 0.3s ease 0s;
+				transition: color 0.3s ease 0s, transform 0.3s ease 0s;
 			}
 			.name {
 				font: 400 40px/1.2 ReformaGrotesk, sans-serif;
 				letter-spacing: 0.05em;
 				text-transform: uppercase;
 				color: #fff;
+				transition: color 0.3s ease 0s, transform 0.3s ease 0s;
+			}
+			.price {
+				white-space: nowrap;
+				font: 500 12px 'GothamPro', sans-serif;
+				letter-spacing: 0.083em;
+				text-transform: uppercase;
+				color: $sea;
+				opacity: 0;
+				height: 0;
 				transition: all 0.3s ease 0s;
+
+				.roub {
+					display: inline-block;
+				}
 			}
 		}
 		&.hidden {
@@ -2938,6 +2952,16 @@ form .input-wrapper.error .input-placeholder {
 		&:hover .brand,
 		&:hover .name {
 			color: $sea;
+			transform: translateY(-50px);
+		}
+		&:hover .name {
+			transition: color 0.3s ease 0s, transform 0.3s ease 0.1s;
+		}
+		&:hover .price {
+			opacity: 1;
+			transform: translateY(-50px);
+			margin-top: 7px;
+			transition: all 0.3s ease 0.2s;
 		}
 	}
 }

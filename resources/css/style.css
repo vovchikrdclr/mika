@@ -3619,7 +3619,7 @@ form .input-wrapper.error .input-placeholder {
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 10px;
-  transition: all 0.3s ease 0s;
+  transition: color 0.3s ease 0s, transform 0.3s ease 0s;
 }
 
 .catalog .container .item .text .name {
@@ -3627,7 +3627,22 @@ form .input-wrapper.error .input-placeholder {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #fff;
+  transition: color 0.3s ease 0s, transform 0.3s ease 0s;
+}
+
+.catalog .container .item .text .price {
+  white-space: nowrap;
+  font: 500 12px 'GothamPro', sans-serif;
+  letter-spacing: 0.083em;
+  text-transform: uppercase;
+  color: #85C7C2;
+  opacity: 0;
+  height: 0;
   transition: all 0.3s ease 0s;
+}
+
+.catalog .container .item .text .price .roub {
+  display: inline-block;
 }
 
 .catalog .container .item.hidden {
@@ -3641,6 +3656,18 @@ form .input-wrapper.error .input-placeholder {
 .catalog .container .item:hover .brand,
 .catalog .container .item:hover .name {
   color: #85C7C2;
+  transform: translateY(-50px);
+}
+
+.catalog .container .item:hover .name {
+  transition: color 0.3s ease 0s, transform 0.3s ease 0.1s;
+}
+
+.catalog .container .item:hover .price {
+  opacity: 1;
+  transform: translateY(-50px);
+  margin-top: 7px;
+  transition: all 0.3s ease 0.2s;
 }
 
 .collections {
