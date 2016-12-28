@@ -3931,16 +3931,23 @@ form .input-wrapper.error .input-placeholder {
 			margin-top: 25px;
 			float: left;
 
+			.units {
+				display: inline-block;
+				font-size: 24px;
+				margin-left: 8px;
+			}
+			sup {
+				font-size:70%;
+				vertical-align:super;
+			}
 			.roub {
-				position: absolute;
-				top: -4px;
-				right: 0;
 				font-size: 30px;
+				vertical-align:top;
 			}
 		}
 		.bay {
 			float: right;
-			width: 65%;
+			width: 60%;
 			font: 400 11px/1.8 'GothamPro', sans-serif;
 			text-transform: uppercase;
 			letter-spacing: 0.073em;

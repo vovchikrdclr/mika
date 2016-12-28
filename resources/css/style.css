@@ -4701,16 +4701,25 @@ form .input-wrapper.error .input-placeholder {
   float: left;
 }
 
+.product-page .r .price .units {
+  display: inline-block;
+  font-size: 24px;
+  margin-left: 8px;
+}
+
+.product-page .r .price sup {
+  font-size: 70%;
+  vertical-align: super;
+}
+
 .product-page .r .price .roub {
-  position: absolute;
-  top: -4px;
-  right: 0;
   font-size: 30px;
+  vertical-align: top;
 }
 
 .product-page .r .bay {
   float: right;
-  width: 65%;
+  width: 60%;
   font: 400 11px/1.8 'GothamPro', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.073em;
