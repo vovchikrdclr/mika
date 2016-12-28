@@ -1323,6 +1323,15 @@ main.index {
   margin-top: 5px;
 }
 
+.product .price .roub {
+  display: inline-block;
+}
+
+.product .price sup {
+  font-size: 70%;
+  vertical-align: super;
+}
+
 .product .btn {
   position: absolute;
   top: 42%;
@@ -3634,7 +3643,6 @@ form .input-wrapper.error .input-placeholder {
   white-space: nowrap;
   font: 500 12px 'GothamPro', sans-serif;
   letter-spacing: 0.083em;
-  text-transform: uppercase;
   color: #85C7C2;
   opacity: 0;
   height: 0;
@@ -3643,6 +3651,11 @@ form .input-wrapper.error .input-placeholder {
 
 .catalog .container .item .text .price .roub {
   display: inline-block;
+}
+
+.catalog .container .item .text .price sup {
+  font-size: 70%;
+  vertical-align: super;
 }
 
 .catalog .container .item.hidden {
