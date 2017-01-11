@@ -5646,6 +5646,10 @@ form .input-wrapper.error .input-placeholder {
   opacity: 0;
 }
 
+.replaceable {
+  min-height: 700px;
+}
+
 @keyframes preload-show-1 {
   from {
     transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);

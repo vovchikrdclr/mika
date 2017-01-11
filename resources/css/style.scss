@@ -4816,7 +4816,9 @@ form .input-wrapper.error .input-placeholder {
 		opacity: 0;
 	}
 }
-
+.replaceable {
+	min-height: 700px;
+}
 // preloader 
 
 @for $i from 1 through 6 {
