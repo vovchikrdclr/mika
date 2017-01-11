@@ -25,18 +25,18 @@ define([
 
 		var data = new FormData();
 		var href;
-		
 		for (var key in storeData) {
-			// if (storeData[key].active === true) {
+			if (storeData[key].active === true) {
 				href = storeData[key].href;
-				data.append('type', storeData[key].type);
-				data.append('name', storeData[key].name);
-			// }
+				data.append(storeData[key].type, storeData[key].name);
+				
+			}
 		}
 
 		utils.ajax.post(href, data, function(e) {
 
 			var pars = JSON.parse(e);
+			console.log(pars);
 			var done = (pars.hasOwnProperty('done') && (pars.done === 'true' || pars.done === true));
 
 			if (!pars.hasOwnProperty('status') || pars.status === 'error') {
