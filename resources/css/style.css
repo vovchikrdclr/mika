@@ -3030,7 +3030,7 @@ form .input-wrapper.error .input-placeholder {
   position: relative;
   margin: auto;
   width: 670px;
-  height: 355px;
+  height: 410px;
   border: 10px solid #4C52A4;
 }
 
@@ -3164,8 +3164,39 @@ form .input-wrapper.error .input-placeholder {
   background: none;
 }
 
-.popup.popup-login .form-popup input[type=submit] {
-  display: none;
+.popup.popup-login .form-popup button {
+  display: inline-block;
+  margin-top: 50px;
+  display: inline-block;
+  color: #fff;
+  background: #EFCA58;
+  transition: all 0.3s ease 0s;
+  border: none;
+  outline: none;
+  border-radius: none;
+}
+
+.popup.popup-login .form-popup button:hover {
+  padding-right: 30px;
+}
+
+.popup.popup-login .form-popup button:after {
+  content: none;
+}
+
+.popup.popup-login .form-popup .regirstation {
+  margin-top: 10px;
+  display: inline-block;
+  font: 900 11px 'GothamPro', sans-serif;
+  text-transform: uppercase;
+  color: #85C7C2;
+  letter-spacing: 0.073em;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.popup.popup-login .form-popup .regirstation:hover {
+  color: #000;
 }
 
 .popup.popup-login .form-popup input[type=text],
@@ -3211,6 +3242,10 @@ form .input-wrapper.error .input-placeholder {
 
 .popup.popup-login .form-popup .bottom a:hover {
   color: #000;
+}
+
+.popup.popup-regirstation .form-popup {
+  height: 470px;
 }
 
 .popup.popup-search.active {

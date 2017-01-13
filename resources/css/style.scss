@@ -2374,7 +2374,7 @@ form .input-wrapper.error .input-placeholder {
 			position: relative;
 			margin: auto;
 			width: 670px;
-			height: 355px;
+			height: 410px;
 			border: 10px solid $blue;
 
 			&:after {
@@ -2502,7 +2502,40 @@ form .input-wrapper.error .input-placeholder {
 				background: none;
 			}
 			input[type=submit] {
-				display: none;
+				
+				// display: none;
+			}
+			button {
+				display: inline-block;
+				margin-top: 50px;
+			    display: inline-block;
+			    color: #fff;
+			    background: #EFCA58;
+			    transition: all 0.3s ease 0s;
+			    border: none;
+			    outline: none;
+			    border-radius: none;
+
+			    &:hover {
+			    	padding-right: 30px;
+			    }
+			    &:after {
+			    	content: none;
+			    }
+			}
+			.regirstation {
+				margin-top: 10px;
+				display: inline-block; 
+				font: 900 11px 'GothamPro', sans-serif;
+				text-transform: uppercase;
+				color: $sea;
+				letter-spacing: 0.073em;
+				transition: all 0.3s ease 0s;
+				cursor: pointer;
+
+				&:hover {
+					color: #000;
+				}
 			}
 			input[type=text],
 			input[type=password] {
@@ -2545,6 +2578,12 @@ form .input-wrapper.error .input-placeholder {
 					}
 				}
 			}
+		}
+	}
+	&.popup-regirstation {
+
+		.form-popup {
+			height: 470px;
 		}
 	}
 	&.popup-search {

@@ -36,7 +36,10 @@
 												<input type="password" class="text" name="password" data-required="true">
 											</label>
 										</div>
-										<input type="submit">
+										<button type="submit" class="btn color-btn">Войти</button>
+										<div class="regirstation view-popup-toggle" data-id="login-popup-regirstation">
+											<span>или зарегистрироваться</span>
+										</div>
 									</form>
 								</div>
 							</div>
@@ -48,6 +51,52 @@
 				</div>
 			</div>
 		</div>
+		<div class="popup popup-login popup-regirstation view-popup" data-id="login-popup-regirstation">
+			<div class="wrapper">
+				<div class="close-popup view-popup-close"></div>
+			</div>
+			<div class="overlay">
+				<div class="wrapper">
+					<div class="form-popup">
+						<div class="top">
+							<div class="form-popup-inner">
+								<div class="nm">через почту</div>
+								<div class="form-wrapper">
+									<form action="#" data-ajax="true" class="view-form status-success" data-id="login-form">
+										<div class="form-response view-form-response" data-id="login-form"></div>
+										<div class="ln">
+											<label class="input-wrapper">
+												<span class="input-placeholder">Электронная почта</span>
+												<input type="text" class="text" name="email" data-required="true">
+											</label>
+										</div>
+										<div class="ln">
+											<label class="input-wrapper">
+												<span class="input-placeholder">Пароль</span>
+												<input type="password" class="text" name="password" data-required="true">
+											</label>
+										</div>
+										<div class="ln">
+											<label class="input-wrapper">
+												<span class="input-placeholder">Повторить пароль</span>
+												<input type="password" class="text" name="password" data-required="true" data-binded="true">
+											</label>
+										</div>
+										<button type="submit" class="btn color-btn">зарегистрироваться</button>
+										<div class="regirstation view-popup-toggle" data-id="login-popup-regirstation">
+											<span>или войти</span>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="bottom">
+							<a href="#" class="view-popup-toggle" data-id="login-popup-serv"><span>зайти или зарегестрироваться через vk, facebook и twitter</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
 		<div class="popup popup-login view-popup" data-id="login-popup-serv">
 			<div class="wrapper">
 				<div class="close-popup view-popup-close"></div>
