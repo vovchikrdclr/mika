@@ -13,8 +13,8 @@
         <g id="0---LOGIN" transform="translate(-859.000000, -148.000000)">
             <g id="popUp---login" transform="translate(345.000000, 148.000000)">
                 <g id="mouse" transform="translate(514.000000, 0.000000)">
-                    <use id="Rectangle-25" stroke="#4C52A4" mask="url(#mask-2)" stroke-width="4" fill="#transparent" xlink:href="#path-1"></use>
-                    <polygon id="Page-1" fill="#4C52A4" points="40 38.2352941 31.7647059 30 30 31.7647059 38.2352941 40 30 48.2352941 31.7647059 50 40 41.7647059 48.2352941 50 50 48.2352941 41.7647059 40 50 31.7647059 48.2352941 30"></polygon>
+                    <use id="Rectangle-25" stroke="#fff" mask="url(#mask-2)" stroke-width="4" fill="#transparent" xlink:href="#path-1"></use>
+                    <polygon id="Page-1" fill="#fff" points="40 38.2352941 31.7647059 30 30 31.7647059 38.2352941 40 30 48.2352941 31.7647059 50 40 41.7647059 48.2352941 50 50 48.2352941 41.7647059 40 50 31.7647059 48.2352941 30"></polygon>
                 </g>
             </g>
         </g>

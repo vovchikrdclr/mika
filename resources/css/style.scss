@@ -2294,6 +2294,12 @@ form .input-wrapper.error .input-placeholder {
 			border-color: #fff;
 		}
 	}
+	&.product-choise {
+		.close-popup {
+			background: transparent;
+			background: url('../images/mouse-close2.svg') no-repeat center; 
+		}
+	}
 	&.popup-choice {
 
 		.overlay {

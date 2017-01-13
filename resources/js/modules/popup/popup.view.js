@@ -44,7 +44,7 @@ define(['dispatcher', 'popup/popup.store'], function(dispatcher, store) {
 			// body.addEventListener('touchmove', _preventTouchScroll);
 			
 			console.log(storeData.active);
-			if (storeData.active === 'service-popup') {
+			if (storeData.active === 'service-popup' || storeData.active.indexOf("product-choice-popup") !== -1) {
 				body.classList.add('prevent-scroll-1');
 			} else {
 				body.classList.add('prevent-scroll');
