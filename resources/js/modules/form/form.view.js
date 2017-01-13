@@ -40,52 +40,21 @@ define(['dispatcher', 'form/form.store', 'utils'], function(dispatcher, store, u
 
 		var validate = function(form) {
 			var result = true;
+			var inputs = form.getElementsByTagName('input');
+			var textareas = form.getElementsByTagName('textarea');
 			var bindedData = false;
 
-			var checkField = function(field) {
-				if (!field.getAttribute('data-required')) return;
+			var checkInput = function(input) {
+				if (!input.getAttribute('data-required')) return;
 
-				if (field.type === 'checkbox' && !field.checked) {
-					field.parentNode.classList.add('error');
-
-					// setTimeout(function() {
-					// 	field.parentNode.classList.remove('error');
-					// }, 500);
+				if (!input.value || input.value === '') {
+					input.parentNode.classList.add('error');
 					result = false;
-				} if (field.type !== 'checkbox' && !field.value || field.value === '') {
-					field.parentNode.classList.add('error');
-
-					// setTimeout(function() {
-					// 	field.parentNode.classList.remove('error');
-					// }, 500);
-					result = false;
+					setTimeout(function() {
+						input.parentNode.classList.remove('error');
+					}, 400);
 				}
-
-				if (field.parentNode.classList.contains('error')) {
-					field.addEventListener('change', function () {
-						field.parentNode.classList.remove('error');
-					});
-				}
-			};
-
-			var checkSelect = function(select) {
-				if (!select.getAttribute('data-required') || select.type !== 'select-one') return;
-
-				if (select.selectedIndex === 0) {
-					select.parentNode.classList.add('error');
-
-					// setTimeout(function() {
-					// 	select.parentNode.classList.remove('error');
-					// }, 500);
-					result = false;
-				}
-
-				if (select.parentNode.classList.contains('error')) {
-					select.addEventListener('change', function () {
-						select.parentNode.classList.remove('error');
-					});
-				}
-			};
+			}
 
 			var checkBinded = function(input) {
 				if (!input.getAttribute('data-binded')) return;
@@ -98,22 +67,19 @@ define(['dispatcher', 'form/form.store', 'utils'], function(dispatcher, store, u
 						result = false;
 					}
 				}
-			};
+			}
 
 			for (var i = 0; i < inputs.length; i++) {
-				checkField(inputs[i]);
+				checkInput(inputs[i]);
 				checkBinded(inputs[i]);
 			}
-			for (var j = 0; j < textareas.length; j++) {
-				checkField(textareas[j]);
-				checkBinded(textareas[j]);
-			}
-			for (var l = 0; l < selects.length; l++) {
-				checkSelect(selects[l]);
+			for (var i = 0; i < textareas.length; i++) {
+				checkInput(textareas[i]);
+				checkBinded(textareas[i]);
 			}
 
 			return result;
-		};
+		}
 
 		item.element.addEventListener('submit', function(e) {
 			var action = form.action;
