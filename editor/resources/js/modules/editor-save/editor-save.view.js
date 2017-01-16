@@ -12,13 +12,14 @@ define(['dispatcher', 'popup/popup.store',], function(dispatcher, popupStore) {
 			id = popupStore.getData().activeId;
 			if (!id) return;
 
+			console.log(img.files[0]);
 			dispatcher.dispatch({
 				type: 'editor-item-change',
 				id: id,
 				hd: input1.value,
 				subhd: input2.value,
 				linkId: input3.value,
-				img: img.file
+				img: img.files[0]
 			});
 
 			dispatcher.dispatch({
@@ -37,7 +38,6 @@ define(['dispatcher', 'popup/popup.store',], function(dispatcher, popupStore) {
 		input2   = document.getElementById('subhd-input');
 		input3	 = document.getElementById('link-id-input');
 		img = document.getElementById('img-input');
-
 
 		_handle(saveBtn);
 	}

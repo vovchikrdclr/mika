@@ -2838,6 +2838,11 @@ form .input-wrapper.error .input-placeholder {
 
 			a {
 				margin: 15px 0;
+				transition: all 0.3s ease 0s;
+
+				&.disabled {
+					opacity: 0;
+				}
 			}
 			a:hover,
 			a.link-active {

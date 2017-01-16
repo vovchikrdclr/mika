@@ -44,6 +44,28 @@ define([
 				response = pars.response;
 				_replace();
 			}
+			var filter = pars.filter;
+
+			for (var key in filter) {
+				var head = filter[key]
+				for (var key1 in head) {
+					if (head[key1].disabled === 1) {
+						var item = document.getElementsByClassName('inner-link');
+						for (var i = 0; i < item.length; i++) {
+							if (item[i].getAttribute("data-name") === key1) {
+								_diseableOk(item[i]);
+							}
+						}
+					} else {
+						var item = document.getElementsByClassName('inner-link');
+						for (var i = 0; i < item.length; i++) {
+							if (item[i].getAttribute("data-name") === key1) {
+								_diseableNo(item[i]);
+							}
+						}
+					}
+				}
+			}
 
 		}, true);
 
@@ -52,6 +74,19 @@ define([
 				type: 'mutate'
 			})
 		}, 20);
+	}
+
+	var _diseableOk = function(el) {
+		setTimeout(function() {
+			el.style.display = "none";
+		}, 350);
+		el.classList.add('disabled');
+	}
+	var _diseableNo = function(el) {
+		setTimeout(function() {
+			el.style.display = "block";
+		}, 1000/60);
+		el.classList.remove('disabled');
 	}
 
 	var _replace = function() {
