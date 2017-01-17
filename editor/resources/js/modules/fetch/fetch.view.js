@@ -5,7 +5,7 @@ define(['dispatcher', 'editor-items/editor-items.store', 'utils'], function(disp
 	var errorMsg;
 	var action;
 
-	var _sendData = function() {
+	var _sendData = function(type) {
 		var items = itemsStore.getData().items;
 		var data = new FormData();
 		var jsonData;
@@ -15,6 +15,8 @@ define(['dispatcher', 'editor-items/editor-items.store', 'utils'], function(disp
 
 		var convertData = function(item) {
 
+			data.append('type', type);
+			data.append('id', item.id);
 			data.append('id', item.id);
 			data.append('left', item.x);
 			data.append('top', item.y);
@@ -33,7 +35,6 @@ define(['dispatcher', 'editor-items/editor-items.store', 'utils'], function(disp
 		utils.ajax.post(action, data, function(e) {
 
 			var pars = JSON.parse(e);
-			console.log(pars);
 			var done = (pars.hasOwnProperty('done') && (pars.done === 'true' || pars.done === true));
 
 			if (!pars.hasOwnProperty('status') || pars.status === 'error') {
@@ -76,8 +77,8 @@ define(['dispatcher', 'editor-items/editor-items.store', 'utils'], function(disp
 		errorMsg = document.getElementById('error-msg');
 
 		dispatcher.subscribe(function(e) {
-			if (e.type === 'editor-save') {
-				_sendData();
+			if (e.type === 'editor-save' || e.type === 'editor-item-delete') {
+				_sendData(e.type);
 			}
 		});
 	}

@@ -12,7 +12,6 @@ define(['dispatcher', 'popup/popup.store',], function(dispatcher, popupStore) {
 			id = popupStore.getData().activeId;
 			if (!id) return;
 
-			console.log(img.files[0]);
 			dispatcher.dispatch({
 				type: 'editor-item-change',
 				id: id,
