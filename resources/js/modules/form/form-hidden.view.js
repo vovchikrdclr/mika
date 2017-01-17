@@ -2,7 +2,6 @@ define(['dispatcher', 'utils'], function(dispatcher, utils) {
 
 	"use strict";
 
-	var form = document.getElementsByClassName('form-hidden')[0];
 	var data = new FormData();
 	var href;
 
@@ -13,16 +12,16 @@ define(['dispatcher', 'utils'], function(dispatcher, utils) {
 		function _event(el) {
 			var name = el.getAttribute('data-name');
 			var type = el.getAttribute('data-type');
+			var action = el.getAttribute('data-action');
 
 			el.addEventListener('click', function () {
 				active = !active;
 
 				var data = new FormData();
 
-				data.append('type', type);
-				data.append('name', name);
+				data.append(type, name);
 
-				utils.ajax.post(href, data, function(e) {
+				utils.ajax.post(action, data, function(e) {
 				}, true);
 
 			}, false);
@@ -33,10 +32,18 @@ define(['dispatcher', 'utils'], function(dispatcher, utils) {
 	}
 
 	var init = function() {
+
 		var btnResult = document.getElementsByClassName('form-result')[0];
+		if (!btnResult) {
+			return
+		}
+
 		href = btnResult.getAttribute('href');
 
 		var popup = document.getElementsByClassName('popup-choice');
+		if (!popup) {
+			return
+		}
 		for (var i = 0; i < popup.length; i++) {
 			_add(popup[i]);
 		}
