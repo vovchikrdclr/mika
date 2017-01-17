@@ -3755,9 +3755,21 @@ form .input-wrapper.error .input-placeholder {
   left: 60%;
 }
 
-.collections .main-slide.scroll .text, .collections .main-slide.scroll .control-collection-slider {
+.collections .main-slide.scroll .control-collection-slider {
   opacity: 0;
   transform: translateY(-50px);
+}
+
+.collections .main-slide.scroll .text h1 {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.2s ease 0s !important;
+}
+
+.collections .main-slide.scroll .text h4 {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.2s ease 0.5s !important;
 }
 
 .collections .collection-slider {
@@ -3779,14 +3791,20 @@ form .input-wrapper.error .input-placeholder {
 
 .collections .collection-slider .swiper-slide .text {
   position: absolute;
-  bottom: 138px;
+  bottom: 98px;
   left: 90px;
   max-width: 35%;
   color: #fff;
-  transition: all 0.2s ease 0s;
 }
 
-.collections .collection-slider .swiper-slide .text:after {
+.collections .collection-slider .swiper-slide .text h1 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  transition: all 0.2s ease 0.5s;
+}
+
+.collections .collection-slider .swiper-slide .text h1:after {
   content: "";
   width: 110%;
   height: 100%;
@@ -3794,11 +3812,28 @@ form .input-wrapper.error .input-placeholder {
   top: 0px;
   left: -5%;
   background: #4C52A4;
+  z-index: -1;
 }
 
-.collections .collection-slider .swiper-slide .text h1 {
+.collections .collection-slider .swiper-slide .text h4 {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.2s ease 0s;
   position: relative;
   z-index: 2;
+  letter-spacing: 0.05em;
+}
+
+.collections .collection-slider .swiper-slide .text h4:after {
+  content: "";
+  width: 110%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: -5%;
+  background: #4C52A4;
+  z-index: -1;
 }
 
 .collections .collection-slider .swiper-button-next {
