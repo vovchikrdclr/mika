@@ -110,57 +110,18 @@ define(['dispatcher', 'form/form.store', 'utils'], function(dispatcher, store, u
 			});
 
 			// the actual code-----------------------------------------
-			// utils.ajax.post(action, data,function(response) {
-			// 	var json = JSON.parse(response);
-			// 	dispatcher.dispatch({
-			// 		type: 'ajax-form-submit',
-			// 		id: item.id,
-			// 		response: json
-			// 	});
-			// 	dispatcher.dispatch({
-			// 		type: 'ajax-server-response',
-			// 		response: json
-			// 	});
-			// 	if (!json.hasOwnProperty('status') || json.status === 'error' || json.status === 'success-reset') {
-			// 		setTimeout(function() {
-			// 			dispatcher.dispatch({
-			// 				type: 'ajax-form-reset',
-			// 				id: item.id
-			// 			});
-			// 		}, 3000);
-			// 	}
-			// 	if (json.reload === true) {
-			// 		window.location.reload();
-			// 	}
-			// }, true);
-			//-----------------------------------------------------
-
-			
-			// a temporary plug for the client-----------------------
-			var testObj = {
-				status:   'success',
-				reload: true,
-				response: 'Your message has been successfully send. We will write you soon.'
-			};
-			
-			var testJSON = JSON.stringify(testObj);
-			
-			console.log(testJSON);
-			
-			setTimeout(function() {
-				// item.status = 'submitted';
-			
+			utils.ajax.post(action, data,function(response) {
+				var json = JSON.parse(response);
 				dispatcher.dispatch({
 					type: 'ajax-form-submit',
 					id: item.id,
-					response: testObj
+					response: json
 				});
 				dispatcher.dispatch({
 					type: 'ajax-server-response',
-					response: testObj
+					response: json
 				});
-			
-				if (!testObj.hasOwnProperty('status') || testObj.status === 'error' || testObj.status === 'success-reset') {
+				if (!json.hasOwnProperty('status') || json.status === 'error' || json.status === 'success-reset') {
 					setTimeout(function() {
 						dispatcher.dispatch({
 							type: 'ajax-form-reset',
@@ -168,10 +129,49 @@ define(['dispatcher', 'form/form.store', 'utils'], function(dispatcher, store, u
 						});
 					}, 3000);
 				}
-				if (testObj.reload === true) {
+				if (json.reload === true) {
 					window.location.reload();
 				}
-			}, 2000);
+			}, true);
+			//-----------------------------------------------------
+
+			
+			// a temporary plug for the client-----------------------
+			// var testObj = {
+			// 	status:   'success',
+			// 	reload: true,
+			// 	response: 'Your message has been successfully send. We will write you soon.'
+			// };
+			
+			// var testJSON = JSON.stringify(testObj);
+			
+			// console.log(testJSON);
+			
+			// setTimeout(function() {
+			// 	// item.status = 'submitted';
+			
+			// 	dispatcher.dispatch({
+			// 		type: 'ajax-form-submit',
+			// 		id: item.id,
+			// 		response: testObj
+			// 	});
+			// 	dispatcher.dispatch({
+			// 		type: 'ajax-server-response',
+			// 		response: testObj
+			// 	});
+			
+			// 	if (!testObj.hasOwnProperty('status') || testObj.status === 'error' || testObj.status === 'success-reset') {
+			// 		setTimeout(function() {
+			// 			dispatcher.dispatch({
+			// 				type: 'ajax-form-reset',
+			// 				id: item.id
+			// 			});
+			// 		}, 3000);
+			// 	}
+			// 	if (testObj.reload === true) {
+			// 		window.location.reload();
+			// 	}
+			// }, 2000);
 			//----------------------------------------------------
 
 
