@@ -3747,6 +3747,10 @@ form .input-wrapper.error .input-placeholder {
   overflow: hidden;
 }
 
+.collections .main-slide.scroll {
+  cursor: default;
+}
+
 .collections .main-slide.scroll .collection-slider {
   left: 60%;
 }
@@ -3777,6 +3781,7 @@ form .input-wrapper.error .input-placeholder {
   position: absolute;
   bottom: 138px;
   left: 90px;
+  max-width: 35%;
   color: #fff;
   transition: all 0.2s ease 0s;
 }

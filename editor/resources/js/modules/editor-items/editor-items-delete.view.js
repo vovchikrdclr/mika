@@ -10,7 +10,6 @@ define(['dispatcher', 'popup/popup.store'], function(dispatcher, popupStore) {
 				type: 'editor-item-delete',
 				id: id
 			});
-
 			dispatcher.dispatch({
 				type: 'popup-close'
 			});

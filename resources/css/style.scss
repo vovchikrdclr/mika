@@ -3047,10 +3047,12 @@ form .input-wrapper.error .input-placeholder {
 		overflow: hidden;
 
 		&.scroll {
-
+			cursor: default;
+			
 			.collection-slider {
 				left: 60%;
 			}
+
 			.text, .control-collection-slider {
 				opacity: 0;
 				transform: translateY(-50px);
@@ -3076,6 +3078,7 @@ form .input-wrapper.error .input-placeholder {
 				position: absolute;
 				bottom: 138px;
 				left: 90px;
+				max-width: 35%;
 				color: #fff;
 				transition: all 0.2s ease 0s;
 				
