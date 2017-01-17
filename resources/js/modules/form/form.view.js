@@ -129,7 +129,7 @@ define(['dispatcher', 'form/form.store', 'utils'], function(dispatcher, store, u
 						});
 					}, 3000);
 				}
-				if (json.reload === "true") {
+				if (json.reload === true) {
 					window.location.reload();
 				}
 			}, true);
