@@ -31,8 +31,8 @@ define(['dispatcher'], function(dispatcher) {
 			}
 		} else {
 			if (!items.hasOwnProperty(e.id)) return;
-			inner.innerHTML = '';
-			items[e.id].element.classList.remove('active');
+			// inner.innerHTML = '';
+			// items[e.id].element.classList.remove('active');
 		}
 
 		if (e.type === 'ajax-form-reset') {

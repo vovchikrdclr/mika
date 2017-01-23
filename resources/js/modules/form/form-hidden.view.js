@@ -2,26 +2,31 @@ define(['dispatcher', 'utils'], function(dispatcher, utils) {
 
 	"use strict";
 
-	var data = new FormData();
 	var href;
+	var choises = [];
 
 	function _add(el) {
 		var item = el.getElementsByClassName('input-btn');
-		var active = false;
 
 		function _event(el) {
 			var name = el.getAttribute('data-name');
 			var type = el.getAttribute('data-type');
 			var action = el.getAttribute('data-action');
+			var choise = el.getAttribute('data-choise');
 
 			el.addEventListener('click', function () {
-				active = !active;
 
 				var data = new FormData();
-
+				if (choises.indexOf(choise) !== -1) {
+					data.append('act', "replace");
+				} else {
+					data.append('act', "add");
+				}
 				data.append(type, name);
 
+				choises.push(choise);
 				utils.ajax.post(action, data, function(e) {
+
 				}, true);
 
 			}, false);
