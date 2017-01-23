@@ -2,7 +2,7 @@ define(['dispatcher', 'scroll/scroll.store'], function(dispatcher, store) {
 
 	"use strict";
 
-	var item = document.getElementsByClassName('main-slide')[0];
+	var item = document.getElementsByClassName('auto-scroll')[0];
 	var active = false;
 	var content = document.getElementsByClassName('content')[0];
 	var header = document.getElementsByTagName('header')[0];
