@@ -16,12 +16,12 @@ define(['dispatcher', 'utils'], function(dispatcher, utils) {
 			el.addEventListener('click', function () {
 
 				var data = new FormData();
-				if (types.indexOf(type) !== -1) {
-					data.append('act', "replace");
-				} else {
-					data.append('act', "add");
-					types.push(type);
-				}
+				// if (types.indexOf(type) !== -1) {
+				// 	data.append('act', "replace");
+				// } else {
+				// 	data.append('act', "add");
+				// 	types.push(type);
+				// }
 				data.append(type, name);
 				
 				utils.ajax.post(action, data, function(e) {
