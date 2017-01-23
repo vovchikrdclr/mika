@@ -3,7 +3,7 @@ define(['dispatcher', 'utils'], function(dispatcher, utils) {
 	"use strict";
 
 	var href;
-	var choises = [];
+	var types = [];
 
 	function _add(el) {
 		var item = el.getElementsByClassName('input-btn');
@@ -12,19 +12,18 @@ define(['dispatcher', 'utils'], function(dispatcher, utils) {
 			var name = el.getAttribute('data-name');
 			var type = el.getAttribute('data-type');
 			var action = el.getAttribute('data-action');
-			var choise = el.getAttribute('data-choise');
 
 			el.addEventListener('click', function () {
 
 				var data = new FormData();
-				if (choises.indexOf(choise) !== -1) {
+				if (types.indexOf(type) !== -1) {
 					data.append('act', "replace");
 				} else {
 					data.append('act', "add");
+					types.push(type);
 				}
 				data.append(type, name);
-
-				choises.push(choise);
+				
 				utils.ajax.post(action, data, function(e) {
 
 				}, true);
