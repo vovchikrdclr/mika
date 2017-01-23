@@ -18,6 +18,7 @@ define([
 
 
 	var _handleRouteChange = function(storeData) {
+		var active = false;
 
 		storeData = routerStore.getData().items;
 
@@ -26,10 +27,11 @@ define([
 		var data = new FormData();
 		var href;
 		for (var key in storeData) {
+			href = storeData[key].href;
+			
 			if (storeData[key].active === true) {
-				href = storeData[key].href;
+				active = true;
 				data.append(storeData[key].type, storeData[key].name);
-
 			}
 		}
 

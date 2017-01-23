@@ -1,4 +1,4 @@
-define(['dispatcher', 'utils'], function(dispatcher, utils) {
+define(['dispatcher', 'utils', 'popup/popup.store'], function(dispatcher, utils, popupStore) {
 
 	"use strict";
 
@@ -23,7 +23,7 @@ define(['dispatcher', 'utils'], function(dispatcher, utils) {
 				// 	types.push(type);
 				// }
 				data.append(type, name);
-				
+
 				utils.ajax.post(action, data, function(e) {
 
 				}, true);
@@ -36,6 +36,15 @@ define(['dispatcher', 'utils'], function(dispatcher, utils) {
 	}
 
 	var init = function() {
+
+		// if (popupStore.getData().active === false) {
+		// 	var data = new FormData();
+		// 	data.append('act', 'delete quests');
+			
+		// 	utils.ajax.post(action, data, function(e) {
+
+		// 	}, true);
+		// }
 
 		var btnResult = document.getElementsByClassName('form-result')[0];
 		if (!btnResult) {
