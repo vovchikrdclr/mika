@@ -302,7 +302,8 @@ main {
 		opacity: 0;
 		transition: all 0.3s ease 0s;
 	}
-	&:hover:before {
+	&:hover:before,
+	&.active:before {
 		opacity: 1;
 		animation: btn-pattern 7.2s linear 0s infinite;
 	}
@@ -2369,6 +2370,9 @@ form .input-wrapper.error .input-placeholder {
 		}
 		.overlay {
 			background: rgba(255,255,255,1);
+			height: auto;
+			min-height: 100%;
+			padding-bottom: 180px;
 		}
 		.form-popup {
 			position: relative;

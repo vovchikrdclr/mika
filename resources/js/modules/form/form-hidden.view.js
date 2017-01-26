@@ -15,6 +15,7 @@ define(['dispatcher', 'utils', 'popup/popup.store'], function(dispatcher, utils,
 
 			el.addEventListener('click', function () {
 
+				el.classList.add('active');
 				var data = new FormData();
 				// if (types.indexOf(type) !== -1) {
 				// 	data.append('act', "replace");
@@ -33,6 +34,15 @@ define(['dispatcher', 'utils', 'popup/popup.store'], function(dispatcher, utils,
 		for (var i = 0; i < item.length; i++) {
 			_event(item[i]);
 		}
+	}
+	var _unactive = function() {
+		if (popupStore.getData().active === false || popupStore.getData().active === 'filter-popup') {
+			var item = document.getElementsByClassName('input-btn');
+			for (var i = 0; i < item.length; i++) {
+				item[i].classList.remove('active');
+			}
+		}
+		
 	}
 
 	var init = function() {
@@ -67,6 +77,7 @@ define(['dispatcher', 'utils', 'popup/popup.store'], function(dispatcher, utils,
 			window.location.href = href;
 		});
 
+		popupStore.eventEmitter.subscribe(_unactive);
 	}
 
 	return {

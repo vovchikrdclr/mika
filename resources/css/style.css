@@ -1379,7 +1379,7 @@ main.index {
   transition: all 0.3s ease 0s;
 }
 
-.color-btn:hover:before {
+.color-btn:hover:before, .color-btn.active:before {
   opacity: 1;
   animation: btn-pattern 7.2s linear 0s infinite;
 }
@@ -3024,6 +3024,9 @@ form .input-wrapper.error .input-placeholder {
 
 .popup.popup-login .overlay {
   background: white;
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 180px;
 }
 
 .popup.popup-login .form-popup {
