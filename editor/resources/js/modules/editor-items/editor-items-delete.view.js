@@ -13,6 +13,9 @@ define(['dispatcher', 'popup/popup.store'], function(dispatcher, popupStore) {
 			dispatcher.dispatch({
 				type: 'popup-close'
 			});
+			dispatcher.dispatch({
+				type: 'editor-save'
+			});
 
 		}, false);
 	}

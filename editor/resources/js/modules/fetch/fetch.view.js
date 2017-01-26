@@ -15,17 +15,16 @@ define(['dispatcher', 'editor-items/editor-items.store', 'utils'], function(disp
 
 		var convertData = function(item) {
 
-			data.append('type', type);
-			data.append('id', item.id);
-			data.append('id', item.id);
-			data.append('left', item.x);
-			data.append('top', item.y);
-			data.append('width', item.w);
-			data.append('height', item.h);
-			data.append('header', item.hd);
-			data.append('subheader', item.subhd);
-			data.append('linkId', item.linkId);
-			data.append('img', item.img);
+			data.append('points['+id+'][type]', type);
+			data.append('points['+id+'][id]', item.id);
+			data.append('points['+id+'][left]', item.x);
+			data.append('points['+id+'][top]', item.y);
+			data.append('points['+id+'][width]', item.w);
+			data.append('points['+id+'][height]', item.h);
+			data.append('points['+id+'][header]', item.hd);
+			data.append('points['+id+'][subHeader]', item.subhd);
+			data.append('points['+id+'][linkId]', item.linkId);
+			data.append('points['+id+'][img]', item.img);
 		}
 
 		for (var id in items) {
@@ -77,7 +76,7 @@ define(['dispatcher', 'editor-items/editor-items.store', 'utils'], function(disp
 		errorMsg = document.getElementById('error-msg');
 
 		dispatcher.subscribe(function(e) {
-			if (e.type === 'editor-save' || e.type === 'editor-item-delete') {
+			if (e.type === 'editor-save') {
 				_sendData(e.type);
 			}
 		});
