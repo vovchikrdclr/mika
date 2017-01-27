@@ -3,7 +3,8 @@ define(['dispatcher', 'utils', 'popup/popup.store'], function(dispatcher, utils,
 	"use strict";
 
 	var href;
-	var types = [];
+	var action;
+	var items = {};
 
 	function _add(el) {
 		var item = el.getElementsByClassName('input-btn');
@@ -11,24 +12,15 @@ define(['dispatcher', 'utils', 'popup/popup.store'], function(dispatcher, utils,
 		function _event(el) {
 			var name = el.getAttribute('data-name');
 			var type = el.getAttribute('data-type');
-			var action = el.getAttribute('data-action');
 
 			el.addEventListener('click', function () {
 
 				el.classList.add('active');
-				var data = new FormData();
-				// if (types.indexOf(type) !== -1) {
-				// 	data.append('act', "replace");
-				// } else {
-				// 	data.append('act', "add");
-				// 	types.push(type);
-				// }
-				data.append(type, name);
 
-				utils.ajax.post(action, data, function(e) {
-
-				}, true);
-
+				items[type] = {
+					type: type,
+					name: name
+				}
 			}, false);
 		}
 		for (var i = 0; i < item.length; i++) {
@@ -36,32 +28,20 @@ define(['dispatcher', 'utils', 'popup/popup.store'], function(dispatcher, utils,
 		}
 	}
 	var _unactive = function() {
-		if (popupStore.getData().active === false || popupStore.getData().active === 'filter-popup') {
-			var item = document.getElementsByClassName('input-btn');
-			for (var i = 0; i < item.length; i++) {
-				item[i].classList.remove('active');
-			}
+		var item = document.getElementsByClassName('input-btn');
+		for (var i = 0; i < item.length; i++) {
+			item[i].classList.remove('active');
 		}
-		
 	}
 
 	var init = function() {
-
-		// if (popupStore.getData().active === false) {
-		// 	var data = new FormData();
-		// 	data.append('act', 'delete quests');
-			
-		// 	utils.ajax.post(action, data, function(e) {
-
-		// 	}, true);
-		// }
 
 		var btnResult = document.getElementsByClassName('form-result')[0];
 		if (!btnResult) {
 			return
 		}
 
-		href = btnResult.getAttribute('href');
+		action = btnResult.getAttribute('href');
 
 		var popup = document.getElementsByClassName('popup-choice');
 		if (!popup) {
@@ -74,7 +54,21 @@ define(['dispatcher', 'utils', 'popup/popup.store'], function(dispatcher, utils,
 		btnResult.addEventListener('click', function (e) {
 			e.preventDefault();
 
-			window.location.href = href;
+			var data = new FormData();
+			for (var key in items) {
+				data.append(items[key].type, items[key].name);
+			}
+
+			utils.ajax.post(action, data, function(e) {
+
+				var pars = JSON.parse(e);
+				
+				setTimeout(function() {
+					window.location.href = pars.href;
+				}, 300);
+
+			}, true);
+			
 		});
 
 		popupStore.eventEmitter.subscribe(_unactive);
