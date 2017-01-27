@@ -164,6 +164,10 @@ define([
 				_handleMutate();
 			}
 		});
+		var disElem = document.getElementsByClassName('disabled');
+		for (var i = 0; i < disElem.length; i++) {
+			disElem.style.display="none";
+		}
 	}
 
 	return {

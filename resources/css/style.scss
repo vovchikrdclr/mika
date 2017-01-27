@@ -205,6 +205,8 @@ main {
 	img {
 		width: auto;
 		height: auto;
+		max-height: 400px;
+		max-width: 400px;
 		display: inline-block;
 		vertical-align: middle;
 	}

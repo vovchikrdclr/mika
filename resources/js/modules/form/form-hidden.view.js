@@ -54,20 +54,25 @@ define(['dispatcher', 'utils', 'popup/popup.store'], function(dispatcher, utils,
 		btnResult.addEventListener('click', function (e) {
 			e.preventDefault();
 
-			var data = new FormData();
+			var query = [];
+    
 			for (var key in items) {
-				data.append(items[key].type, items[key].name);
+		        query.push(encodeURIComponent(key) + '=' + encodeURIComponent(items[key].name));
+	
 			}
 
-			utils.ajax.post(action, data, function(e) {
+			href = "/catalog/tile/" + '?' + query.join('&');
+			console.log(href);
 
-				var pars = JSON.parse(e);
-				
+			// utils.ajax.post(action, data, function(e) {
+
+			// 	var pars = JSON.parse(e);
+
 				setTimeout(function() {
-					window.location.href = pars.href;
+					window.location.href = href;
 				}, 300);
 
-			}, true);
+			// }, true);
 			
 		});
 
