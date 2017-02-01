@@ -1,4 +1,4 @@
-define(['dispatcher', 'scroll/scroll.store'], function(dispatcher, store) {
+define(['dispatcher', 'scroll/scroll.store', 'resize/breakpoint.store'], function(dispatcher, store, breakpointStore) {
 
 	"use strict";
 
@@ -149,6 +149,11 @@ define(['dispatcher', 'scroll/scroll.store'], function(dispatcher, store) {
 	}
 
 	var init = function() {
+		if (screen.width < 700) {
+			item.style.position = "absolute";
+			item.style.top = "-650px";
+			return
+		}
 
 		if (!item) {
 			return

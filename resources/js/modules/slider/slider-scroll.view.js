@@ -44,6 +44,11 @@ define(['dispatcher', 'scroll/scroll.store'], function(dispatcher, scrollStore) 
 		if (!content || !slider || !mainSlide) {
 			return
 		}
+		if (screen.width < 700) {
+			mainSlide.style.position = "absolute";
+			mainSlide.style.top = "-650px";
+			return
+		}
 
 		scrollHeight = content.offsetHeight;
 
