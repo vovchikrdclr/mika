@@ -2724,6 +2724,9 @@ form .input-wrapper.error .input-placeholder {
     	opacity: 0;
     	transition: all 0.3s ease 0s;
 
+    	p {
+			font: 400 55px/1 'ReformaGrotesk', sans-serif;
+    	}
     	&.active {
     		opacity: 1;
     	}

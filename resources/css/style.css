@@ -3394,6 +3394,10 @@ form .input-wrapper.error .input-placeholder {
   transition: all 0.3s ease 0s;
 }
 
+.form-section .responce p {
+  font: 400 55px/1 'ReformaGrotesk', sans-serif;
+}
+
 .form-section .responce.active {
   opacity: 1;
 }
