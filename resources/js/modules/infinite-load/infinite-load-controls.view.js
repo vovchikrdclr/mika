@@ -47,7 +47,7 @@ define(['dispatcher', 'infinite-load/infinite-load.store', 'utils'], function(di
 
 			items[id].page++;
 
-			data.page = items[id].page;
+			data.p = items[id].page;
 			data.id = id;
 
 			dispatcher.dispatch({
